@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bad Santa and the Angry Elves — Take the Sleigh to Edinburgh</title>
+<meta name="description" content="Ten years of Christmas chaos. Now Bad Santa and the Angry Elves are headed to the Edinburgh Fringe Festival 2026 — 25 nights, one cave, 80 seats. Help land the sleigh.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/">
+<meta property="og:title" content="Bad Santa and the Angry Elves — The Sleigh Is Going to Scotland">
+<meta property="og:description" content="Ten years of Christmas chaos. Now we're headed to Edinburgh Fringe 2026 — 25 nights in a stone cave under the city. Help land the sleigh.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bad Santa and the Angry Elves — The Sleigh Is Going to Scotland">
+<meta name="twitter:description" content="Ten years of Christmas chaos. Edinburgh Fringe 2026 — 25 nights, one cave. Help land the sleigh.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -269,20 +285,18 @@
     gap: 16px;
   }
   .poster {
-    aspect-ratio: 3/4;
     background: #1a1a1a;
     border: 1px solid var(--line);
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 12px;
-    position: relative;
+    display: flex; flex-direction: column;
     overflow: hidden;
     transition: transform 0.2s, border-color 0.2s;
   }
   .poster:hover { transform: translateY(-4px); border-color: var(--blood); }
   .poster-img {
-    position: absolute; inset: 0;
+    aspect-ratio: 1/1;
+    position: relative;
     background: #1a1a1a;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     display: flex; align-items: center; justify-content: center;
@@ -293,7 +307,6 @@
     text-transform: uppercase;
     text-align: center;
     padding: 8px;
-    opacity: 1;
   }
   .poster-img[data-year]::before {
     content: attr(data-year);
@@ -320,10 +333,9 @@
   .poster-img[data-year="2024"] { background-image: url('posters/poster-2024.jpg'); }
   .poster-img[data-year="2025"] { background-image: url('posters/poster-2025.jpg'); }
   .poster-meta {
-    position: relative; z-index: 2;
-    background: var(--black);
-    padding: 8px 10px;
+    padding: 10px 10px 12px;
     border-left: 2px solid var(--blood);
+    margin: 0 8px 8px;
   }
   .poster-year {
     font-family: 'Oswald', sans-serif;
@@ -852,25 +864,25 @@
           <div class="tier-amount">$25</div>
           <div class="tier-name">I Believe</div>
           <div class="tier-desc">Help keep the sleigh airborne.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank" class="tier-link">Contribute →</a>
+          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
         </div>
         <div class="tier">
           <div class="tier-amount">$50</div>
           <div class="tier-name">Christmas Every Day</div>
           <div class="tier-desc">Help fund the rebellion.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank" class="tier-link">Contribute →</a>
+          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
         </div>
         <div class="tier">
           <div class="tier-amount">$100</div>
           <div class="tier-name">North Pole Resistance</div>
           <div class="tier-desc">Official supporter of the Edinburgh run.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank" class="tier-link">Contribute →</a>
+          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
         </div>
         <div class="tier">
           <div class="tier-amount">$250</div>
           <div class="tier-name">Keepers of the Flame</div>
           <div class="tier-desc">Because somebody has to smuggle magic through customs.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank" class="tier-link">Contribute →</a>
+          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
         </div>
       </div>
     </div>
@@ -886,19 +898,19 @@
           <div class="tier-amount">$1,000</div>
           <div class="tier-name">Coal Sponsor</div>
           <div class="tier-desc">Logo on the digital tour kit. Social shoutouts. Behind-the-scenes content from the run.</div>
-          <a href="mailto:sponsor@badsantarocks.com?subject=Coal Sponsor Inquiry" class="tier-link">Inquire →</a>
+          <a href="mailto:BSandtheAE@gmail.com?subject=Coal Sponsor Inquiry" class="tier-link">Inquire →</a>
         </div>
         <div class="tier sponsor-tier">
           <div class="tier-amount">$2,500</div>
           <div class="tier-name">Reindeer Games</div>
           <div class="tier-desc">Everything in Coal, plus on-stage recognition in Edinburgh, dedicated social features, and a VIP package back in Orlando.</div>
-          <a href="mailto:sponsor@badsantarocks.com?subject=Reindeer Games Sponsor Inquiry" class="tier-link">Inquire →</a>
+          <a href="mailto:BSandtheAE@gmail.com?subject=Reindeer Games Sponsor Inquiry" class="tier-link">Inquire →</a>
         </div>
         <div class="tier sponsor-tier">
           <div class="tier-amount">$5,000+</div>
           <div class="tier-name">North Pole Syndicate</div>
           <div class="tier-desc">Premier sponsor recognition across all Edinburgh promotion, exclusive content access, and a direct line to the band.</div>
-          <a href="mailto:sponsor@badsantarocks.com?subject=North Pole Syndicate Inquiry" class="tier-link">Inquire →</a>
+          <a href="mailto:BSandtheAE@gmail.com?subject=North Pole Syndicate Inquiry" class="tier-link">Inquire →</a>
         </div>
       </div>
     </div>
@@ -917,7 +929,7 @@
           <li>Direct line to Christian and the creative team</li>
           <li>Eternal placement on Santa's "Probably Not Damned" list</li>
         </ul>
-        <a href="mailto:exec@badsantarocks.com?subject=Executive Producer Inquiry" class="exec-cta">Start the Conversation →</a>
+        <a href="mailto:BSandtheAE@gmail.com?subject=Executive Producer Inquiry" class="exec-cta">Start the Conversation →</a>
       </div>
     </div>
   </div>
@@ -950,7 +962,7 @@
   <p class="red">For ten years, Orlando gave us a place<br>to build this weird little<br>Christmas miracle.</p>
   <p>Now we're taking it to<br>the world stage.</p>
   <p class="small">If this show ever made you laugh, sing, cry, believe, or forget your problems for a couple hours — help us get the sleigh to Scotland.</p>
-  <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank" class="btn">Help Land the Sleigh</a>
+  <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="btn">Help Land the Sleigh</a>
 </div>
 
 <!-- FOOTER -->
@@ -961,7 +973,7 @@
     <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank">Instagram</a>
     <a href="https://x.com/BSantaAElves" target="_blank">Twitter</a>
     <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank">Edinburgh Tickets</a>
-    <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh" target="_blank">Donate</a>
+    <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank">Donate</a>
   </div>
   <div class="copyright">Bad Santa and the Angry Elves · Orlando, FL · est. 2016 · Edinburgh Fringe 2026</div>
 </footer>
