@@ -89,6 +89,16 @@
     color: var(--bone);
   }
   .topbar-brand .bolt { color: var(--blood); margin: 0 4px; }
+  .topbar-listen {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--bone);
+    text-decoration: none;
+  }
+  .topbar-listen:hover { color: var(--gold); }
   .topbar-cta {
     background: var(--blood);
     color: var(--bone);
@@ -639,7 +649,7 @@
 <div class="topbar">
   <div class="topbar-brand">Bad Santa<span class="bolt">⚡</span>The Angry Elves</div>
   <div style="display:flex;align-items:center;gap:20px;">
-    <a href="epk.html" style="font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:0.14em;font-size:12px;text-transform:uppercase;color:var(--bone);">Listen</a>
+    <a href="epk.html" class="topbar-listen">Listen</a>
     <a href="#support" class="topbar-cta">Support</a>
   </div>
 </div>

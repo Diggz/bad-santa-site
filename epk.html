@@ -186,7 +186,7 @@
   /* ---------- TRACKS ---------- */
   .track-card {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 0;
     background: rgba(236, 228, 214, 0.04);
     border: 1px solid var(--line);
@@ -200,10 +200,12 @@
     transform: translateY(-2px);
   }
   .track-art {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
     display: block;
+    background: #111;
   }
   .track-body {
     display: flex;
@@ -324,8 +326,7 @@
     .topbar-nav { gap: 16px; }
     .topbar-nav a { font-size: 11px; }
     .facts-grid { grid-template-columns: repeat(2, 1fr); }
-    .track-card { grid-template-columns: 90px 1fr; }
-    .track-art { width: 90px; height: 90px; }
+    .track-card { grid-template-columns: 140px 1fr; }
   }
 </style>
 </head>
