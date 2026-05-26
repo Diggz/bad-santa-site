@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPK — Bad Santa and the Angry Elves</title>
+<meta name="description" content="Electronic Press Kit for Bad Santa and the Angry Elves — The Greatest Christmas Band of All Time. Listen, watch, book.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/epk.html">
+<meta property="og:title" content="EPK — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Electronic Press Kit for the Greatest Christmas Band of All Time. Edinburgh Fringe 2026.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EPK — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Electronic Press Kit for the Greatest Christmas Band of All Time. Edinburgh Fringe 2026.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #a8a094;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 32px;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-brand {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--bone);
+  }
+  .topbar-brand .bolt { color: var(--blood); margin: 0 4px; }
+  .topbar-nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .topbar-nav a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    transition: color 0.2s;
+  }
+  .topbar-nav a:hover { color: var(--bone); }
+  .topbar-nav a.active { color: var(--blood); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 120px 40px 80px;
+    text-align: center;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('hero-band.jpg') center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.3;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    color: var(--blood);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 24px;
+  }
+  .hero p {
+    font-size: 20px;
+    color: var(--bone-dim);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--blood);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--blood);
+  }
+  .section-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.15;
+    color: var(--bone);
+    margin-bottom: 32px;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--blood);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-text {
+    max-width: 720px;
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--bone-dim);
+  }
+
+  /* ---------- SPOTIFY ---------- */
+  .spotify-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .spotify-artist {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .track {
+    background: rgba(236, 228, 214, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .track:hover {
+    border-color: var(--blood);
+    transform: translateY(-2px);
+  }
+  .track-number {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 28px;
+    color: var(--blood);
+    opacity: 0.5;
+    min-width: 36px;
+  }
+  .track-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bone);
+    margin-bottom: 4px;
+  }
+  .track-info span {
+    font-size: 13px;
+    color: var(--bone-dim);
+  }
+  .track a {
+    margin-left: auto;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blood);
+    white-space: nowrap;
+  }
+
+  /* ---------- QUICK FACTS ---------- */
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .fact {
+    border-left: 2px solid var(--blood);
+    padding-left: 16px;
+  }
+  .fact-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    color: var(--bone-dim);
+    margin-bottom: 4px;
+  }
+  .fact-value {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--bone);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-section {
+    text-align: center;
+    padding: 80px 40px;
+    border-top: 1px solid var(--line);
+  }
+  .contact-section .section-label {
+    justify-content: center;
+  }
+  .contact-section .section-label::before { display: none; }
+  .contact-email {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: clamp(18px, 3vw, 28px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .contact-email a { color: var(--blood); }
+  .contact-email a:hover { color: var(--bone); }
+  .social-links {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .social-links a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-dim);
+  }
+  .social-links a:hover { color: var(--bone); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .hero { padding: 80px 24px 60px; }
+    section { padding: 60px 24px; }
+    .topbar { padding: 12px 20px; }
+    .topbar-brand { font-size: 11px; letter-spacing: 0.12em; }
+    .topbar-nav { gap: 16px; }
+    .topbar-nav a { font-size: 11px; }
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="index.html" class="topbar-brand" style="text-decoration:none;">Bad Santa<span class="bolt">⚡</span>The Angry Elves</a>
+  <div class="topbar-nav">
+    <a href="index.html">Home</a>
+    <a href="epk.html" class="active">Listen</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-label">Electronic Press Kit</div>
+    <h1>The Greatest Christmas Band of All Time.</h1>
+    <p>Ten years of sold-out Christmas chaos. Now headed to Edinburgh Fringe 2026.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="section-label">The Band</div>
+  <h2 class="section-title">Bad Santa &amp; <em>The Angry Elves.</em></h2>
+  <div class="about-text">
+    <p>Bad Santa and The Angry Elves aren't just the greatest Christmas Band of all time, they're the coolest cats in rock history, belting out hits with the swagger of seasoned rock gods. Their live shows hit harder than a frozen snowball fight, with lyrics sharper than a reindeer's antlers and guitar riffs hotter than chestnuts roasting on an open fire.</p>
+    <br>
+    <p>After being permanently banned from the North Pole, they've set their sights on world domination, spreading Christmas cheer all year long. Imagine a tour that fuses the legendary stage presence of Bowie, the electrifying energy of Van Halen, the unapologetic style of Prince, and the rebellious spirit of The Ramones &mdash; creating a spectacle for the naughty and the nice.</p>
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section style="padding-top: 0;">
+  <div class="section-label">At a Glance</div>
+  <h2 class="section-title">Quick <em>Facts.</em></h2>
+  <div class="facts-grid">
+    <div class="fact">
+      <div class="fact-label">Origin</div>
+      <div class="fact-value">Orlando, FL</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Active Since</div>
+      <div class="fact-value">2016</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Genre</div>
+      <div class="fact-value">Christmas Rock</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Shows</div>
+      <div class="fact-value">10 Years of Tours</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Next</div>
+      <div class="fact-value">Edinburgh Fringe 2026</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Dates</div>
+      <div class="fact-value">Aug 6–30, 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC / SPOTIFY -->
+<section>
+  <div class="section-label">Listen</div>
+  <h2 class="section-title">The <em>Music.</em></h2>
+
+  <div class="spotify-grid">
+    <div class="spotify-artist">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6hhZrzXkYpKANfPvO3PZZ1?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 48px;">Featured Tracks</div>
+  <div class="track-list">
+    <div class="track">
+      <div class="track-number">1</div>
+      <div class="track-info">
+        <h3>Frosty</h3>
+        <span>Xmas Sampler</span>
+      </div>
+      <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Listen ↗</a>
+    </div>
+    <div class="track">
+      <div class="track-number">2</div>
+      <div class="track-info">
+        <h3>Toy in the Box</h3>
+        <span>Xmas Sampler</span>
+      </div>
+      <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Listen ↗</a>
+    </div>
+    <div class="track">
+      <div class="track-number">3</div>
+      <div class="track-info">
+        <h3>Still Haven't Found What I'm Shopping For</h3>
+        <span>Xmas Sampler</span>
+      </div>
+      <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Listen ↗</a>
+    </div>
+    <div class="track">
+      <div class="track-number">4</div>
+      <div class="track-info">
+        <h3>Xmas Pressure</h3>
+        <span>Xmas Sampler</span>
+      </div>
+      <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Listen ↗</a>
+    </div>
+    <div class="track">
+      <div class="track-number">5</div>
+      <div class="track-info">
+        <h3>Xmas Bop</h3>
+        <span>Xmas Sampler</span>
+      </div>
+      <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Listen ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <div class="section-label">Booking &amp; Press</div>
+  <h2 class="section-title">Get in <em>Touch.</em></h2>
+  <div class="contact-email">
+    <a href="mailto:BSandtheAE@gmail.com?subject=Press/Booking Inquiry">BSandtheAE@gmail.com</a>
+  </div>
+  <div class="social-links">
+    <a href="https://www.facebook.com/BadSantaandTheAngryElves" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank">Instagram</a>
+    <a href="https://x.com/BSantaAElves" target="_blank">Twitter</a>
+    <a href="https://open.spotify.com/artist/6hhZrzXkYpKANfPvO3PZZ1" target="_blank">Spotify</a>
+    <a href="https://music.apple.com/us/artist/bad-santa-the-angry-elves/583449507" target="_blank">Apple Music</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  Bad Santa and the Angry Elves · Orlando, FL · est. 2016 · Edinburgh Fringe 2026
+</footer>
+
+</body>
+</html>
