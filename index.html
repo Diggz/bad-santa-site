@@ -166,6 +166,26 @@
     line-height: 1.35;
   }
   .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  .countdown {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .countdown-number {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(64px, 10vw, 96px);
+    line-height: 1;
+    color: var(--bone);
+    text-shadow: 0 0 30px rgba(200, 36, 44, 0.3);
+  }
+  .countdown-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 14px;
+    color: var(--blood);
+    margin-top: 4px;
+  }
   .btn {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
@@ -393,6 +413,7 @@
   .elf-portrait[data-elf="ccdeelf"] { background-image: url('elves/cc-deelf.jpg'); }
   .elf-portrait[data-elf="elfie-nicks"] { background-image: url('elves/elfie-nicks.jpg'); }
   .elf-portrait[data-elf="elfie-van-whalin"] { background-image: url('elves/elfie-van-whalin.jpg'); }
+  .elf-portrait[data-elf="yeti-lee"] { background-image: url('elves/yeti-lee.JPG'); }
   .elf-name {
     font-family: 'Bungee Inline', sans-serif;
     font-size: 26px;
@@ -650,6 +671,7 @@
   <div class="topbar-brand">Bad Santa<span class="bolt">⚡</span>The Angry Elves</div>
   <div style="display:flex;align-items:center;gap:20px;">
     <a href="epk.html" class="topbar-listen">Listen</a>
+    <a href="buzz.html" class="topbar-listen">Buzz</a>
     <a href="#tickets" class="topbar-listen">Tickets</a>
     <a href="#support" class="topbar-cta">Support</a>
   </div>
@@ -667,6 +689,10 @@
     <div class="hero-ctas">
       <a href="#support" class="btn">Support the Show</a>
       <a href="#sponsors" class="btn ghost">Become a Sponsor</a>
+    </div>
+    <div class="countdown">
+      <div class="countdown-number" id="countdown-days"></div>
+      <div class="countdown-label">Days to Edinburgh</div>
     </div>
   </div>
 </header>
@@ -855,6 +881,12 @@
         <div class="elf-role">Guitar · The Wild One</div>
         <div class="elf-bio">787 years old. Can't even drink legally at the North Pole. Fearless. There is only the music and the moment and whatever completely unadvisable thing comes next.</div>
       </div>
+      <div class="elf">
+        <div class="elf-portrait" data-elf="yeti-lee"></div>
+        <div class="elf-name">Yeti Lee</div>
+        <div class="elf-role">Bass · The Experiment</div>
+        <div class="elf-bio">They said it couldn't be done. Elfie Nicks combined the DNA of an elf, a yeti, and Geddy Lee from Rush in his unsanctioned North Pole lab. The result: the most ferocious bass player the workshop has ever produced. Edinburgh will be his first deployment.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -990,6 +1022,16 @@
   </div>
   <div class="copyright">Bad Santa and the Angry Elves · Orlando, FL · est. 2016 · Edinburgh Fringe 2026</div>
 </footer>
+
+<script>
+(function() {
+  var opening = new Date('2026-08-06T00:00:00');
+  var now = new Date();
+  var diff = Math.ceil((opening - now) / (1000 * 60 * 60 * 24));
+  var el = document.getElementById('countdown-days');
+  if (el) el.textContent = diff > 0 ? diff : 0;
+})();
+</script>
 
 </body>
 </html>
