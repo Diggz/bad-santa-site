@@ -167,24 +167,22 @@
   }
   .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
   .countdown {
-    margin-top: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 32px;
+    background: var(--blood-dark);
+    border-bottom: 1px solid rgba(236, 228, 214, 0.1);
   }
-  .countdown-number {
-    font-family: 'Bungee Inline', 'Oswald', sans-serif;
-    font-size: clamp(64px, 10vw, 96px);
-    line-height: 1;
-    color: var(--bone);
-    text-shadow: 0 0 30px rgba(200, 36, 44, 0.3);
-  }
+  .countdown-number,
   .countdown-label {
     font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
+    font-weight: 700;
     font-size: 14px;
-    color: var(--blood);
-    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--bone);
   }
   .btn {
     font-family: 'Oswald', sans-serif;
@@ -677,6 +675,12 @@
   </div>
 </div>
 
+<!-- COUNTDOWN -->
+<div class="countdown">
+  <span class="countdown-number" id="countdown-days"></span>
+  <span class="countdown-label">Days to Edinburgh</span>
+</div>
+
 <!-- HERO -->
 <header class="hero">
   <div class="hero-bg"></div>
@@ -689,10 +693,6 @@
     <div class="hero-ctas">
       <a href="#support" class="btn">Support the Show</a>
       <a href="#sponsors" class="btn ghost">Become a Sponsor</a>
-    </div>
-    <div class="countdown">
-      <div class="countdown-number" id="countdown-days"></div>
-      <div class="countdown-label">Days to Edinburgh</div>
     </div>
   </div>
 </header>
