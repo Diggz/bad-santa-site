@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buzz — Bad Santa and the Angry Elves</title>
-<meta name="description" content="Press, articles, and video coverage of Bad Santa and the Angry Elves — The Greatest Christmas Band of All Time. Edinburgh Fringe 2026.">
+<title>Shows — Bad Santa and the Angry Elves</title>
+<meta name="description" content="Upcoming preview shows and fundraisers for Bad Santa and the Angry Elves. All proceeds help get the band to Edinburgh Fringe 2026.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://badsantaandtheangryelves.com/buzz.html">
-<meta property="og:title" content="Buzz — Bad Santa and the Angry Elves">
-<meta property="og:description" content="Press, articles, and video coverage. Edinburgh Fringe 2026.">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/shows.html">
+<meta property="og:title" content="Shows — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Preview shows and fundraisers. All proceeds help get the band to Edinburgh Fringe 2026.">
 <meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Buzz — Bad Santa and the Angry Elves">
-<meta name="twitter:description" content="Press, articles, and video coverage. Edinburgh Fringe 2026.">
+<meta name="twitter:title" content="Shows — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Preview shows and fundraisers. All proceeds help get the band to Edinburgh Fringe 2026.">
 <meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,8 +69,8 @@
   .topbar-brand .bolt { color: var(--blood); margin: 0 4px; }
   .topbar-links {
     display: flex;
-    gap: 24px;
     align-items: center;
+    gap: 24px;
   }
   .topbar-links a {
     font-family: 'Oswald', sans-serif;
@@ -117,6 +117,7 @@
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
   .mobile-menu {
     display: none;
     position: fixed;
@@ -216,84 +217,109 @@
     font-family: 'Bungee Inline', 'Oswald', sans-serif;
     font-size: clamp(28px, 5vw, 48px);
     line-height: 1.15;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .section-title em {
     font-style: normal;
     color: var(--blood);
   }
+  .section-intro {
+    font-size: 19px;
+    color: var(--bone-dim);
+    max-width: 680px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
 
-  /* ---------- BUZZ CARDS ---------- */
-  .buzz-grid {
+  /* ---------- SHOW CARDS ---------- */
+  .show-list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
   }
-  .buzz-card {
+  .show-card {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 100px 1fr auto;
     gap: 0;
     background: rgba(236, 228, 214, 0.04);
     border: 1px solid var(--line);
     border-radius: 8px;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.2s;
+    transition: border-color 0.3s;
+    align-items: center;
   }
-  .buzz-card:hover {
+  .show-card:hover {
     border-color: var(--blood);
-    transform: translateY(-2px);
   }
-  .buzz-card a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .buzz-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    min-height: 200px;
-  }
-  .buzz-body {
+  .show-date {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 28px 32px;
-    gap: 12px;
+    padding: 24px 16px;
+    background: rgba(200, 36, 44, 0.12);
+    border-right: 2px solid var(--blood);
   }
-  .buzz-type {
+  .show-month {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    font-size: 11px;
     color: var(--blood);
   }
-  .buzz-title {
+  .show-day {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--bone);
+  }
+  .show-info {
+    padding: 24px 28px;
+  }
+  .show-venue {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     color: var(--bone);
-    line-height: 1.3;
+    margin-bottom: 4px;
   }
-  .buzz-source {
-    font-size: 16px;
+  .show-venue a {
+    color: var(--bone);
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .show-venue a:hover { color: var(--gold); border-color: var(--gold); }
+  .show-detail {
+    font-size: 15px;
     color: var(--bone-dim);
     font-style: italic;
   }
-  .buzz-link {
+  .show-action {
+    padding: 24px 28px;
+  }
+  .show-ticket {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--blood);
-    margin-top: 8px;
-    transition: color 0.2s;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    border: 1px solid var(--line-strong);
+    padding: 8px 16px;
+    border-radius: 4px;
+    white-space: nowrap;
   }
-  .buzz-card:hover .buzz-link { color: var(--bone); }
+  .show-ticket.live {
+    color: var(--bone);
+    background: var(--blood);
+    border-color: var(--blood);
+  }
+  .show-ticket.live:hover {
+    background: transparent;
+    color: var(--blood);
+  }
 
   /* ---------- CONTACT ---------- */
   .contact-section {
@@ -349,8 +375,11 @@
     .topbar-brand { font-size: 11px; letter-spacing: 0.12em; }
     .topbar-links { display: none; }
     .hamburger { display: block; }
-    .buzz-card { grid-template-columns: 1fr; }
-    .buzz-img { min-height: 200px; max-height: 250px; }
+    .show-card { grid-template-columns: 80px 1fr; }
+    .show-action { grid-column: 1 / -1; padding: 0 20px 20px; }
+    .show-date { padding: 20px 12px; }
+    .show-day { font-size: 28px; }
+    .show-info { padding: 20px; }
   }
 </style>
 </head>
@@ -361,8 +390,8 @@
   <a href="index.html" class="topbar-brand" style="text-decoration:none;">Bad Santa<span class="bolt">⚡</span>The Angry Elves</a>
   <div class="topbar-links">
     <a href="epk.html">Listen</a>
-    <a href="buzz.html" class="active">Buzz</a>
-    <a href="shows.html">Shows</a>
+    <a href="buzz.html">Buzz</a>
+    <a href="shows.html" class="active">Shows</a>
     <a href="index.html#tickets">Tickets</a>
     <a href="index.html#support" class="topbar-cta" style="text-decoration:none;">Support</a>
   </div>
@@ -382,38 +411,75 @@
 <div class="hero">
   <div class="hero-img"></div>
   <div class="hero-content">
-    <div class="hero-label">Press &amp; Media</div>
-    <h1>The Buzz.</h1>
-    <p>What they're saying about the Greatest Christmas Band of All Time.</p>
+    <div class="hero-label">Preview Shows</div>
+    <h1>The Sleigh Warms Up.</h1>
+    <p>America preview shows and fundraisers. All proceeds help get the band to Edinburgh.</p>
   </div>
 </div>
 
-<!-- BUZZ ITEMS -->
+<!-- SHOWS -->
 <section>
-  <div class="section-label">Coverage</div>
-  <h2 class="section-title">In The <em>Press.</em></h2>
+  <div class="section-label">Upcoming</div>
+  <h2 class="section-title">The <em>Shows.</em></h2>
+  <p class="section-intro">Before we land the sleigh in Scotland, we're warming up on home turf. Every show is a fundraiser — all proceeds go toward getting the band to Edinburgh Fringe 2026.</p>
 
-  <div class="buzz-grid">
+  <div class="show-list">
 
-    <a href="https://pulpcitymag.com/bad-santa-the-angry-elves-go-to-edinburgh/" target="_blank" class="buzz-card">
-      <img src="elves/pulpcity.png" alt="Pulp City Magazine article" class="buzz-img">
-      <div class="buzz-body">
-        <div class="buzz-type">Article</div>
-        <div class="buzz-title">Bad Santa & The Angry Elves Go to Edinburgh</div>
-        <div class="buzz-source">Pulp City Magazine</div>
-        <div class="buzz-link">Read article ↗</div>
+    <div class="show-card">
+      <div class="show-date">
+        <div class="show-month">Jul</div>
+        <div class="show-day">17</div>
       </div>
-    </a>
-
-    <a href="https://www.youtube.com/live/tUYZeNjUW7M?si=FbW1NLfxR-aonrcw&t=11784" target="_blank" class="buzz-card">
-      <img src="elves/monsters.png" alt="Bad Santa on Real Radio" class="buzz-img">
-      <div class="buzz-body">
-        <div class="buzz-type">Video</div>
-        <div class="buzz-title">Bad Santa on Real Radio / WTKS 104.1</div>
-        <div class="buzz-source">Monsters in the Morning</div>
-        <div class="buzz-link">Watch video ↗</div>
+      <div class="show-info">
+        <div class="show-venue"><a href="https://maxinesonshine.com/" target="_blank">Maxine's On Shine</a></div>
+        <div class="show-detail">Orlando, FL</div>
       </div>
-    </a>
+      <div class="show-action">
+        <span class="show-ticket">Tickets Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <div class="show-date">
+        <div class="show-month">Jul</div>
+        <div class="show-day">20</div>
+      </div>
+      <div class="show-info">
+        <div class="show-venue"><a href="https://maxinesonshine.com/" target="_blank">Maxine's On Shine</a></div>
+        <div class="show-detail">Orlando, FL</div>
+      </div>
+      <div class="show-action">
+        <span class="show-ticket">Tickets Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <div class="show-date">
+        <div class="show-month">Jul</div>
+        <div class="show-day">25</div>
+      </div>
+      <div class="show-info">
+        <div class="show-venue"><a href="https://drinkatwestend.com/" target="_blank">West End Trading</a></div>
+        <div class="show-detail">Orlando, FL</div>
+      </div>
+      <div class="show-action">
+        <span class="show-ticket">Tickets Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="show-card">
+      <div class="show-date">
+        <div class="show-month">Jul</div>
+        <div class="show-day">26</div>
+      </div>
+      <div class="show-info">
+        <div class="show-venue"><a href="https://willspub.org/" target="_blank">Will's Pub</a></div>
+        <div class="show-detail">Orlando, FL</div>
+      </div>
+      <div class="show-action">
+        <span class="show-ticket">Tickets Coming Soon</span>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -423,7 +489,7 @@
   <div class="section-label">Booking &amp; Press</div>
   <h2 class="section-title">Get in <em>Touch.</em></h2>
   <div class="contact-email">
-    <a href="mailto:BSandtheAE@gmail.com?subject=Press/Booking Inquiry">BSandtheAE@gmail.com</a>
+    <a href="mailto:BSandtheAE@gmail.com?subject=Booking Inquiry">BSandtheAE@gmail.com</a>
   </div>
   <div class="social-links">
     <a href="https://www.facebook.com/BadSantaandTheAngryElves" target="_blank">Facebook</a>
