@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsor the Sleigh — Bad Santa and the Angry Elves</title>
+<meta name="description" content="Sponsor Bad Santa and the Angry Elves at Edinburgh Fringe 2026. 25 nights, 80 seats, one cave. Put your brand in front of a passionate audience on the world stage.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/sponsor.html">
+<meta property="og:title" content="Sponsor the Sleigh — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Put your brand on the world stage. Sponsor the Greatest Christmas Band of All Time at Edinburgh Fringe 2026.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sponsor the Sleigh — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Put your brand on the world stage. Sponsor the Greatest Christmas Band of All Time at Edinburgh Fringe 2026.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #a8a094;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- TOP BAR (minimal for landing page) ---------- */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 32px;
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-brand {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--bone);
+  }
+  .topbar-brand .bolt { color: var(--blood); margin: 0 4px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 100px 40px 80px;
+    text-align: center;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('hero-band.jpg') top center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.25;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 24px;
+  }
+  .hero h1 em { font-style: normal; color: var(--blood); }
+  .hero p {
+    font-size: 20px;
+    color: var(--bone-dim);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--blood);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--blood);
+  }
+  .section-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--blood);
+  }
+
+  /* ---------- OPPORTUNITY ---------- */
+  .opportunity {
+    font-size: 19px;
+    color: var(--bone-dim);
+    max-width: 720px;
+    line-height: 1.65;
+  }
+  .opportunity p { margin-bottom: 20px; }
+
+  /* ---------- FACTS ---------- */
+  .facts-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .fact {
+    flex: 1;
+    min-width: 140px;
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+  }
+  .fact-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .fact-value {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--bone);
+  }
+  .fact-sub {
+    font-size: 14px;
+    color: var(--bone-dim);
+  }
+
+  /* ---------- TIERS ---------- */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .tier {
+    background: #131313;
+    border: 1px solid var(--line);
+    padding: 28px;
+    border-radius: 6px;
+    transition: border-color 0.3s, transform 0.2s;
+  }
+  .tier:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .tier-amount {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .tier-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone);
+    margin-bottom: 10px;
+  }
+  .tier-desc {
+    font-size: 16px;
+    color: var(--bone-dim);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .tier-note {
+    font-size: 15px;
+    color: var(--bone-dim);
+    font-style: italic;
+    margin-top: 24px;
+    max-width: 720px;
+  }
+
+  /* ---------- EXEC PRODUCER ---------- */
+  .exec-box {
+    background: linear-gradient(135deg, rgba(212, 168, 74, 0.08), rgba(200, 36, 44, 0.06));
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 32px;
+  }
+  .exec-box h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .exec-box p {
+    font-size: 18px;
+    color: var(--bone-dim);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 680px;
+  }
+  .exec-list {
+    list-style: none;
+    columns: 2;
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+  .exec-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    color: var(--bone);
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+  .exec-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+  }
+
+  /* ---------- FORM ---------- */
+  .form-section {
+    background: rgba(236, 228, 214, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 48px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .form-section h2 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .form-section h2 em { font-style: normal; color: var(--blood); }
+  .form-subtitle {
+    text-align: center;
+    color: var(--bone-dim);
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+    color: var(--bone);
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .form-group select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a094' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  .form-submit {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 16px;
+    background: var(--blood);
+    color: var(--bone);
+    border: 1px solid var(--blood);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .form-submit:hover {
+    background: transparent;
+    color: var(--blood);
+  }
+  .form-thanks {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .form-thanks h3 {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 28px;
+    color: var(--bone);
+    margin-bottom: 12px;
+  }
+  .form-thanks p {
+    color: var(--bone-dim);
+    font-size: 18px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--bone-dim); }
+  footer a:hover { color: var(--bone); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px) {
+    .hero { padding: 80px 24px 60px; }
+    section { padding: 60px 24px; }
+    .topbar { padding: 12px 20px; }
+    .topbar-brand { font-size: 11px; letter-spacing: 0.12em; }
+    .facts-row { gap: 24px; }
+    .exec-list { columns: 1; }
+    .exec-box { padding: 28px 24px; }
+    .form-section { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="index.html" class="topbar-brand" style="text-decoration:none;">Bad Santa<span class="bolt">⚡</span>The Angry Elves</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-label">Sponsorship Opportunity</div>
+    <h1>Put Your Brand<br>On the <em>World Stage.</em></h1>
+    <p>Bad Santa and the Angry Elves are headed to Edinburgh Fringe 2026 — the largest arts festival on the planet. Come with us.</p>
+  </div>
+</div>
+
+<!-- THE OPPORTUNITY -->
+<section>
+  <div class="section-label">The Opportunity</div>
+  <h2 class="section-title">Why Sponsor <em>the Sleigh?</em></h2>
+  <div class="opportunity">
+    <p>For over a decade, Bad Santa and the Angry Elves have been Orlando's most beloved mythical cabaret rock opera — selling out venues, building a fiercely loyal fanbase, and proving that Christmas chaos is a year-round state of mind.</p>
+    <p>Now we've been officially invited to perform at the Edinburgh Fringe Festival — 25 nights in a stone cave under the city, the biggest arts festival in the world. 3,500 shows. 250 venues. 79 years of history. And your brand, right alongside ours.</p>
+    <p>This isn't a logo on a banner. This is a real partnership with a real community institution — one that reaches audiences across social media, live events, press coverage, and now an international stage. We work with every sponsor to build a package that meets their goals.</p>
+  </div>
+
+  <div class="facts-row">
+    <div class="fact">
+      <div class="fact-label">Festival</div>
+      <div class="fact-value">Edinburgh Fringe</div>
+      <div class="fact-sub">The world's largest arts festival</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Run</div>
+      <div class="fact-value">Aug 6–30, 2026</div>
+      <div class="fact-sub">25 nights</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Venue</div>
+      <div class="fact-value">The Caves</div>
+      <div class="fact-sub">Just The Tonic, Edinburgh</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Capacity</div>
+      <div class="fact-value">80 Seats</div>
+      <div class="fact-sub">Intimate. Loud. Unforgettable.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section>
+  <div class="section-label">Sponsorship Levels</div>
+  <h2 class="section-title">Sponsor <em>Packages.</em></h2>
+
+  <div class="tier-grid">
+    <div class="tier">
+      <div class="tier-amount">$1,000</div>
+      <div class="tier-name">Coal Sponsor</div>
+      <div class="tier-desc">Logo on the digital tour kit. Social shoutouts. Behind-the-scenes content from the run.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-amount">$2,500</div>
+      <div class="tier-name">Reindeer Games</div>
+      <div class="tier-desc">Everything in Coal, plus on-stage recognition in Edinburgh, dedicated social features, and a VIP package back in Orlando.</div>
+    </div>
+    <div class="tier">
+      <div class="tier-amount">$5,000+</div>
+      <div class="tier-name">North Pole Syndicate</div>
+      <div class="tier-desc">Premier sponsor recognition across all Edinburgh promotion, exclusive content access, and a direct line to the band.</div>
+    </div>
+  </div>
+
+  <p class="tier-note">These are starting points. We actively work with every sponsor to customize packages that meet your specific goals — whether that's audience reach, brand alignment, hospitality, or something we haven't thought of yet. Let's talk.</p>
+
+  <!-- EXEC PRODUCER -->
+  <div class="exec-box">
+    <h3>Executive Producer</h3>
+    <p>For those who want to back this thing at the highest level — and become part of what comes after Edinburgh. Executive Producers help fund the theatrical expansion, the Fringe production, media development, and the long-term growth of the show.</p>
+    <ul class="exec-list">
+      <li>Executive Producer credit across all show materials</li>
+      <li>Private monthly production updates from the band</li>
+      <li>VIP access at every Bad Santa show, anywhere</li>
+      <li>Full cast package (merch, signed materials, the works)</li>
+      <li>Direct line to Christian and the creative team</li>
+      <li>Eternal placement on Santa's "Probably Not Damned" list</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FORM -->
+<section>
+  <div class="form-section" id="sponsor-form">
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <h2>Start the <em>Conversation.</em></h2>
+      <p class="form-subtitle">Tell us a little about yourself and we'll be in touch.</p>
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company / Organization</label>
+        <input type="text" id="company" name="company">
+      </div>
+
+      <div class="form-group">
+        <label for="interest">Interested In</label>
+        <select id="interest" name="interest">
+          <option value="">Select a level...</option>
+          <option value="Coal Sponsor ($1,000)">Coal Sponsor ($1,000)</option>
+          <option value="Reindeer Games ($2,500)">Reindeer Games ($2,500)</option>
+          <option value="North Pole Syndicate ($5,000+)">North Pole Syndicate ($5,000+)</option>
+          <option value="Executive Producer">Executive Producer</option>
+          <option value="Custom / Not Sure">Custom / Not Sure Yet</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span style="font-weight:400;letter-spacing:0;text-transform:none;font-size:11px;color:var(--bone-dim);">(optional)</span></label>
+        <textarea id="message" name="message" placeholder="Tell us about your business, what you're looking for, or just say hello."></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Send It</button>
+    </form>
+
+    <div class="form-thanks" id="formThanks">
+      <h3>Message Sent.</h3>
+      <p>We'll be in touch soon. In the meantime, the elves are doing a little dance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html">Bad Santa and the Angry Elves</a> · Orlando, FL · est. 2016 · Edinburgh Fringe 2026
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var form = document.getElementById('contactForm');
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var company = document.getElementById('company').value;
+  var interest = document.getElementById('interest').value;
+  var message = document.getElementById('message').value;
+
+  var subject = 'Sponsor Inquiry' + (interest ? ': ' + interest : '');
+  var body = 'Name: ' + name + '\n'
+    + 'Email: ' + email + '\n'
+    + (company ? 'Company: ' + company + '\n' : '')
+    + (interest ? 'Interest: ' + interest + '\n' : '')
+    + (message ? '\nMessage:\n' + message : '');
+
+  window.location.href = 'mailto:BSandtheAE@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+
+  form.style.display = 'none';
+  document.getElementById('formThanks').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Producer — Bad Santa and the Angry Elves</title>
+<meta name="description" content="Become an Executive Producer of Bad Santa and the Angry Elves. Help launch the next chapter — Edinburgh Fringe 2026, theatrical expansion, and beyond.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/producer.html">
+<meta property="og:title" content="Executive Producer — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Back this thing at the highest level. Become an Executive Producer and help launch the next chapter.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Executive Producer — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Back this thing at the highest level. Become an Executive Producer and help launch the next chapter.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #a8a094;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- TOP BAR (minimal for landing page) ---------- */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 32px;
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-brand {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--bone);
+  }
+  .topbar-brand .bolt { color: var(--blood); margin: 0 4px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 100px 40px 80px;
+    text-align: center;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('hero-band.jpg') top center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.25;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 24px;
+  }
+  .hero h1 em { font-style: normal; color: var(--blood); }
+  .hero p {
+    font-size: 20px;
+    color: var(--bone-dim);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--blood);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--blood);
+  }
+  .section-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--blood);
+  }
+
+  /* ---------- STORY ---------- */
+  .story {
+    font-size: 19px;
+    color: var(--bone-dim);
+    max-width: 720px;
+    line-height: 1.65;
+  }
+  .story p { margin-bottom: 20px; }
+
+  /* ---------- WHAT YOU GET ---------- */
+  .perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .perk {
+    background: linear-gradient(135deg, rgba(212, 168, 74, 0.06), rgba(200, 36, 44, 0.04));
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+    border-radius: 4px;
+  }
+  .perk-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .perk-desc {
+    font-size: 16px;
+    color: var(--bone-dim);
+    line-height: 1.5;
+  }
+
+  /* ---------- VISION ---------- */
+  .vision-box {
+    background: rgba(236, 228, 214, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 40px;
+  }
+  .vision-box h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bone);
+    margin-bottom: 16px;
+  }
+  .vision-list {
+    list-style: none;
+    margin: 0;
+  }
+  .vision-list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 17px;
+    color: var(--bone-dim);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .vision-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+    top: 4px;
+  }
+
+  /* ---------- FORM ---------- */
+  .form-section {
+    background: rgba(236, 228, 214, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 48px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .form-section h2 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .form-section h2 em { font-style: normal; color: var(--blood); }
+  .form-subtitle {
+    text-align: center;
+    color: var(--bone-dim);
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+    color: var(--bone);
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .form-submit {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 16px;
+    background: var(--gold);
+    color: var(--black);
+    border: 1px solid var(--gold);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .form-submit:hover {
+    background: transparent;
+    color: var(--gold);
+  }
+  .form-thanks {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .form-thanks h3 {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 28px;
+    color: var(--bone);
+    margin-bottom: 12px;
+  }
+  .form-thanks p {
+    color: var(--bone-dim);
+    font-size: 18px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--bone-dim); }
+  footer a:hover { color: var(--bone); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px) {
+    .hero { padding: 80px 24px 60px; }
+    section { padding: 60px 24px; }
+    .topbar { padding: 12px 20px; }
+    .topbar-brand { font-size: 11px; letter-spacing: 0.12em; }
+    .perks-grid { grid-template-columns: 1fr; }
+    .vision-box { padding: 28px 24px; }
+    .form-section { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="index.html" class="topbar-brand" style="text-decoration:none;">Bad Santa<span class="bolt">⚡</span>The Angry Elves</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-label">Executive Producer</div>
+    <h1>Help Launch<br>the <em>Next Chapter.</em></h1>
+    <p>This isn't just a show. It's a mythical cabaret rock opera — and it's about to go international. Be part of what comes next.</p>
+  </div>
+</div>
+
+<!-- THE STORY -->
+<section>
+  <div class="section-label">The Vision</div>
+  <h2 class="section-title">Beyond <em>Edinburgh.</em></h2>
+  <div class="story">
+    <p>For over a decade, Bad Santa and the Angry Elves have been living in the presents — selling out venues across Orlando, building a fiercely loyal community, and proving that a ridiculous idea can become something real if you believe in it hard enough.</p>
+    <p>Now we've been officially invited to perform at the Edinburgh Fringe Festival — 25 nights in a stone cave under the city, the biggest arts festival in the world. But Edinburgh isn't the finish line. It's the launchpad.</p>
+    <p>We're building toward a full theatrical expansion — a proper production with a narrative arc, original compositions, and the kind of show that could tour internationally. Executive Producers help fund the Fringe run, the media development, and the long-term growth of this thing from a beloved local institution into something the world gets to experience.</p>
+    <p>This is the ground floor. The people who come in now become part of the origin story.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section>
+  <div class="section-label">What You Get</div>
+  <h2 class="section-title">Producer <em>Benefits.</em></h2>
+
+  <div class="perks-grid">
+    <div class="perk">
+      <div class="perk-title">Executive Producer Credit</div>
+      <div class="perk-desc">Your name across all show materials, programs, digital content, and future productions. This is permanent.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-title">Monthly Production Updates</div>
+      <div class="perk-desc">Private updates from the band — behind-the-scenes content, creative decisions, production progress. You're in the room.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-title">VIP Access, Everywhere</div>
+      <div class="perk-desc">VIP access at every Bad Santa show, anywhere — Orlando, Edinburgh, and whatever comes after.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-title">Full Cast Package</div>
+      <div class="perk-desc">Merch, signed materials, the works. The kind of stuff that ends up in a glass case someday.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-title">Direct Line</div>
+      <div class="perk-desc">Direct access to Christian and the creative team. Your input matters. This is a partnership, not a transaction.</div>
+    </div>
+    <div class="perk">
+      <div class="perk-title">The List</div>
+      <div class="perk-desc">Eternal placement on Santa's "Probably Not Damned" list. Non-transferable. Non-negotiable. Possibly legally binding.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'RE FUNDING -->
+<section>
+  <div class="section-label">Where It Goes</div>
+  <h2 class="section-title">What You're <em>Building.</em></h2>
+
+  <div class="vision-box">
+    <h3>The Roadmap</h3>
+    <ul class="vision-list">
+      <li>Edinburgh Fringe 2026 — 25-night run at The Caves (flights, lodging, venue, production)</li>
+      <li>Professional live recording and documentary content from the Edinburgh run</li>
+      <li>Theatrical expansion — original narrative arc, composed score, staged production</li>
+      <li>Media development — content series, behind-the-scenes documentary</li>
+      <li>Future touring infrastructure — taking the show beyond Orlando and Edinburgh</li>
+      <li>The long-term growth of a decade-old community institution into something the world gets to see</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FORM -->
+<section>
+  <div class="form-section" id="producer-form">
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <h2>Start the <em>Conversation.</em></h2>
+      <p class="form-subtitle">This level is personal. Tell us about yourself and we'll set up a call.</p>
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company / Organization <span style="font-weight:400;letter-spacing:0;text-transform:none;font-size:11px;color:var(--bone-dim);">(if applicable)</span></label>
+        <input type="text" id="company" name="company">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Tell Us About Yourself</label>
+        <textarea id="message" name="message" placeholder="What draws you to this project? What are you hoping to be part of? Or just say hello — we'll take it from there."></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Start the Conversation</button>
+    </form>
+
+    <div class="form-thanks" id="formThanks">
+      <h3>Message Sent.</h3>
+      <p>We'll reach out personally to set up a conversation. Welcome to the sleigh.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html">Bad Santa and the Angry Elves</a> · Orlando, FL · est. 2016 · Edinburgh Fringe 2026
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var company = document.getElementById('company').value;
+  var message = document.getElementById('message').value;
+
+  var subject = 'Executive Producer Inquiry';
+  var body = 'Name: ' + name + '\n'
+    + 'Email: ' + email + '\n'
+    + (company ? 'Company: ' + company + '\n' : '')
+    + (message ? '\n' + message : '');
+
+  window.location.href = 'mailto:BSandtheAE@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formThanks').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
