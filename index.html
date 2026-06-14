@@ -119,6 +119,64 @@
   }
   .topbar-cta:hover { background: transparent; color: var(--blood); }
 
+  /* ---------- SHARE BUTTON ---------- */
+  .share-btn {
+    background: none;
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  .share-btn:hover { border-color: var(--gold); }
+  .share-btn svg { width: 16px; height: 16px; fill: none; stroke: var(--bone); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+  .share-btn:hover svg { stroke: var(--gold); }
+  .share-toast {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: var(--holly);
+    color: var(--bone);
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  .share-toast.show { opacity: 1; transform: translateY(0); }
+  .mobile-share-btn {
+    background: none;
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--bone);
+    transition: border-color 0.2s, color 0.2s;
+    margin-top: 8px;
+  }
+  .mobile-share-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .mobile-share-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
   /* ---------- HAMBURGER ---------- */
   .hamburger {
     display: none;
@@ -731,6 +789,10 @@
     <a href="shows.html">Shows</a>
     <a href="#tickets">Tickets</a>
     <a href="#support" class="topbar-cta">Support</a>
+    <button class="share-btn" onclick="sharesite(this)" aria-label="Share">
+      <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      <span class="share-toast">Link copied!</span>
+    </button>
   </div>
   <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.classList.toggle('open');" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -742,6 +804,10 @@
   <a href="shows.html">Shows</a>
   <a href="#tickets" onclick="document.querySelector('.mobile-menu').classList.remove('open');document.querySelector('.hamburger').classList.remove('open');">Tickets</a>
   <a href="#support" class="topbar-cta" onclick="document.querySelector('.mobile-menu').classList.remove('open');document.querySelector('.hamburger').classList.remove('open');">Support</a>
+  <button class="mobile-share-btn" onclick="sharesite(this)">
+    <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+    Share
+  </button>
 </div>
 
 <!-- COUNTDOWN -->
@@ -1109,6 +1175,32 @@
   var el = document.getElementById('countdown-days');
   if (el) el.textContent = diff > 0 ? diff : 0;
 })();
+</script>
+
+<!-- Share -->
+<script>
+function sharesite(btn) {
+  var data = {
+    title: 'Bad Santa and the Angry Elves',
+    text: 'Mythical Cabaret Rock Opera — Edinburgh Fringe 2026',
+    url: 'https://badsantaandtheangryelves.com'
+  };
+  if (navigator.share) {
+    navigator.share(data).catch(function(){});
+  } else {
+    navigator.clipboard.writeText(data.url).then(function() {
+      var toast = btn.querySelector('.share-toast');
+      if (!toast) {
+        toast = document.createElement('span');
+        toast.className = 'share-toast';
+        toast.textContent = 'Link copied!';
+        btn.appendChild(toast);
+      }
+      toast.classList.add('show');
+      setTimeout(function(){ toast.classList.remove('show'); }, 2000);
+    });
+  }
+}
 </script>
 
 <!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->
