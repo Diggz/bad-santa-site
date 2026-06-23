@@ -21,8 +21,7 @@
     { label: 'Listen', url: 'epk.html' },
     { label: 'Buzz', url: 'buzz.html' },
     { label: 'Shows', url: 'shows.html' },
-    { label: 'Tickets', url: '#tickets', anchor: true },
-    { label: 'Playbill', url: 'playbill.html' }
+    { label: 'Tickets', url: '#tickets', anchor: true }
   ];
 
   /* --- Build desktop nav links --- */
