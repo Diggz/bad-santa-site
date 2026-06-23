@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Playbill — Bad Santa and the Angry Elves | Edinburgh Fringe 2026</title>
+<meta name="description" content="The official digital playbill for Bad Santa and the Angry Elves at Edinburgh Fringe 2026. Meet the cast, read the story, and send a message to Santa.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/playbill.html">
+<meta property="og:title" content="Digital Playbill — Bad Santa and the Angry Elves">
+<meta property="og:description" content="The official playbill. Edinburgh Fringe 2026.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Playbill — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="The official playbill. Edinburgh Fringe 2026.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
+
+<link rel="icon" type="image/jpeg" href="elves/bs-icon.jpg">
+<link rel="apple-touch-icon" href="elves/bs-icon.jpg">
+<link rel="stylesheet" href="includes.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #ccc5b8;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- COVER ---------- */
+  .cover {
+    position: relative;
+    padding: 100px 40px 80px;
+    text-align: center;
+    border-bottom: 2px solid var(--blood);
+  }
+  .cover-bg {
+    position: absolute; inset: 0;
+    background: url('hero-band.jpg') top center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.2;
+  }
+  .cover-content {
+    position: relative; z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .cover-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(32px, 6vw, 56px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 16px;
+  }
+  .cover h1 em { font-style: normal; color: var(--blood); }
+  .cover-sub {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 14px;
+    color: var(--bone-dim);
+    margin-bottom: 8px;
+  }
+  .cover-venue {
+    font-size: 19px;
+    color: var(--bone-dim);
+    font-style: italic;
+    margin-top: 12px;
+  }
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--blood);
+    margin: 28px auto 0;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .wrap + .wrap { padding-top: 0; }
+  .section-rule {
+    width: 100%;
+    height: 1px;
+    background: var(--line);
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--blood);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--blood);
+  }
+  .section-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(26px, 4vw, 40px);
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: normal; color: var(--blood); }
+
+  /* ---------- DIRECTOR'S / KRIS'S NOTE ---------- */
+  .note {
+    margin-bottom: 40px;
+  }
+  .note p {
+    color: var(--bone-dim);
+    margin-bottom: 16px;
+    line-height: 1.65;
+  }
+  .note-sig {
+    margin-top: 32px;
+    font-style: italic;
+    color: var(--bone);
+  }
+  .note-sig strong {
+    display: block;
+    font-style: normal;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  /* ---------- CAST BIOS ---------- */
+  .cast-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .cast-member {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .cast-photo {
+    width: 140px;
+    height: 180px;
+    background-size: cover;
+    background-position: top center;
+    border: 2px solid var(--line-strong);
+    border-radius: 4px;
+  }
+  .cast-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bone);
+    margin-bottom: 2px;
+  }
+  .cast-role {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--blood);
+    margin-bottom: 12px;
+  }
+  .cast-bio {
+    color: var(--bone-dim);
+    line-height: 1.6;
+    font-size: 19px;
+  }
+
+  /* ---------- SPONSOR CARDS ---------- */
+  .sponsor-strip {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .sponsor-card {
+    flex: 1 1 220px;
+    max-width: 340px;
+    background: rgba(236, 228, 214, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    transition: border-color 0.3s;
+  }
+  .sponsor-card:hover { border-color: var(--gold); }
+  .sponsor-logo {
+    width: 100%;
+    max-width: 160px;
+    height: 60px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(236, 228, 214, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .sponsor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .sponsor-logo-placeholder {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+  }
+  .sponsor-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone);
+    margin-bottom: 6px;
+  }
+  .sponsor-desc {
+    font-size: 15px;
+    color: var(--bone-dim);
+    line-height: 1.5;
+  }
+  .sponsor-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    transition: color 0.2s;
+  }
+  .sponsor-link:hover { color: var(--bone); }
+
+  /* ---------- THANK YOU ---------- */
+  .thanks-list {
+    columns: 2;
+    column-gap: 40px;
+    color: var(--bone-dim);
+    line-height: 2;
+    font-size: 18px;
+  }
+
+  /* ---------- MESSAGE FORM ---------- */
+  .message-form {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .form-row {
+    margin-bottom: 20px;
+  }
+  .form-label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    margin-bottom: 8px;
+  }
+  .form-input {
+    width: 100%;
+    background: rgba(236, 228, 214, 0.06);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    padding: 14px 16px;
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    transition: border-color 0.3s;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--blood);
+  }
+  .form-input::placeholder { color: rgba(236, 228, 214, 0.3); }
+  textarea.form-input { min-height: 140px; resize: vertical; }
+  .form-submit {
+    display: inline-block;
+    background: var(--blood);
+    color: var(--bone);
+    padding: 14px 36px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    border: 1px solid var(--blood);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: transparent; color: var(--blood); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px) {
+    .cover { padding: 80px 24px 60px; }
+    .wrap { padding: 60px 24px; }
+    .cast-member { grid-template-columns: 100px 1fr; gap: 20px; }
+    .cast-photo { width: 100px; height: 130px; }
+    .thanks-list { columns: 1; }
+    .sponsor-strip { padding: 30px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-content">
+    <div class="cover-label">Official Digital Playbill</div>
+    <h1>Bad Santa and the <em>Angry Elves</em></h1>
+    <div class="cover-sub">A Mythical Cabaret Rock Opera</div>
+    <div class="cover-venue">Edinburgh Festival Fringe 2026 &middot; August 6 &ndash; 30</div>
+    <div class="cover-divider"></div>
+  </div>
+</div>
+
+<!-- SPONSOR STRIP 1 (top) -->
+<div class="sponsor-strip">
+  <div class="sponsor-card">
+    <div class="sponsor-logo"><span class="sponsor-logo-placeholder">Your Logo Here</span></div>
+    <div class="sponsor-name">Sponsor Name</div>
+    <div class="sponsor-desc">A short description of the sponsor and what they do.</div>
+    <a href="#" class="sponsor-link">Visit &rarr;</a>
+  </div>
+  <div class="sponsor-card">
+    <div class="sponsor-logo"><span class="sponsor-logo-placeholder">Your Logo Here</span></div>
+    <div class="sponsor-name">Sponsor Name</div>
+    <div class="sponsor-desc">A short description of the sponsor and what they do.</div>
+    <a href="#" class="sponsor-link">Visit &rarr;</a>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- NOTE FROM THE DIRECTOR -->
+<div class="wrap">
+  <div class="section-label">From the Director</div>
+  <h2 class="section-title">A Note from the <em>Director.</em></h2>
+  <div class="note">
+    <p>[Director's note goes here. A few paragraphs about the vision for this production, what Edinburgh means, the journey from Orlando to the world stage, and the spirit behind the show.]</p>
+    <div class="note-sig">
+      With gratitude,
+      <strong>[Director Name] &middot; Director</strong>
+    </div>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- NOTE FROM KRIS -->
+<div class="wrap">
+  <div class="section-label">From Kris Kringle IV</div>
+  <h2 class="section-title">A Word from <em>Santa.</em></h2>
+  <div class="note">
+    <p>Over a decade ago this started as a ridiculous idea: play rock and roll Christmas shows with our friends.</p>
+    <p>Somehow it became a tradition. A mythology. A family. A ritual.</p>
+    <p>This year, we were officially invited to perform at the Edinburgh Fringe Festival in Scotland &mdash; the largest arts festival in the world. 3,500 shows. 250 venues. 79 years of history. And on August 6th, we land the sleigh there for a 25-night run.</p>
+    <p>We could have landed our sleigh anywhere. We came to Orlando. And what started here &mdash; and what it's become &mdash; is beyond anything we imagined.</p>
+    <p>Every crowded room. Every singalong. Every ridiculous costume. Every shirt purchase. Every friend you dragged to a show. Every person who said "you HAVE to see this."</p>
+    <p>That's the energy that makes the sleigh fly. We're carrying every one of you with us to Edinburgh &mdash; the heart and soul of the Orlando music scene, the radical idea that Christmas should be celebrated every day, kindness, generosity, joy, and the firm conviction that you shouldn't be a dick.</p>
+    <p>Living in the Presents.</p>
+    <div class="note-sig">
+      Ho Ho Ho,
+      <strong>Kris Kringle IV &middot; Bad Santa</strong>
+    </div>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- CAST -->
+<div class="wrap">
+  <div class="section-label">The Cast</div>
+  <h2 class="section-title">Meet the <em>Elves.</em></h2>
+
+  <div class="cast-grid">
+    <div class="cast-member">
+      <div class="cast-photo" style="background-image: url('elves/bad-santa.jpg');"></div>
+      <div>
+        <div class="cast-name">Bad Santa</div>
+        <div class="cast-role">Kris Kringle IV &middot; Vocals</div>
+        <div class="cast-bio">The fourth son of the Kringle. Exiled from the North Pole by his father, Santa Sr. Landed the sleigh in Orlando and never left. Holds the power to make people believers again.</div>
+      </div>
+    </div>
+
+    <div class="cast-member">
+      <div class="cast-photo" style="background-image: url('elves/cc-deelf.jpg');"></div>
+      <div>
+        <div class="cast-name">CC DeElf</div>
+        <div class="cast-role">Lead Guitar &middot; The Architect</div>
+        <div class="cast-bio">The Elf who taught Eddie Van Halen how to play guitar. Gave Bowie the power to be a Starman. Showed Vince Neil how to fluff his hair. 1907 years old. Doesn't look a day over 1239.</div>
+      </div>
+    </div>
+
+    <div class="cast-member">
+      <div class="cast-photo" style="background-image: url('elves/elfie-nicks.jpg');"></div>
+      <div>
+        <div class="cast-name">Elfie Nicks</div>
+        <div class="cast-role">Drums &middot; The Intellectual</div>
+        <div class="cast-bio">Head Professor at North Pole University. Nobel-nominated thesis on "The Moral Implications of the Naughty List" &mdash; stripped over unsanctioned cloning work. The only Elf licensed to fly Santa's sleigh.</div>
+      </div>
+    </div>
+
+    <div class="cast-member">
+      <div class="cast-photo" style="background-image: url('elves/elfie-van-whalin.jpg');"></div>
+      <div>
+        <div class="cast-name">Elfie Van Whalin'</div>
+        <div class="cast-role">Guitar &middot; The Wild One</div>
+        <div class="cast-bio">787 years old. Can't even drink legally at the North Pole. Fearless. There is only the music and the moment and whatever completely unadvisable thing comes next.</div>
+      </div>
+    </div>
+
+    <div class="cast-member">
+      <div class="cast-photo" style="background-image: url('elves/yeti-lee.JPG');"></div>
+      <div>
+        <div class="cast-name">Yeti Lee</div>
+        <div class="cast-role">Bass &middot; The Experiment</div>
+        <div class="cast-bio">They said it couldn't be done. Elfie Nicks combined the DNA of an elf, a yeti, and Geddy Lee from Rush in his unsanctioned North Pole lab. The result: the most ferocious bass player the workshop has ever produced. Edinburgh will be his first deployment.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPONSOR STRIP 2 (mid) -->
+<div class="sponsor-strip">
+  <div class="sponsor-card">
+    <div class="sponsor-logo"><span class="sponsor-logo-placeholder">Your Logo Here</span></div>
+    <div class="sponsor-name">Sponsor Name</div>
+    <div class="sponsor-desc">A short description of the sponsor and what they do.</div>
+    <a href="#" class="sponsor-link">Visit &rarr;</a>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- CREW -->
+<div class="wrap">
+  <div class="section-label">Behind the Curtain</div>
+  <h2 class="section-title">The <em>Crew.</em></h2>
+
+  <div class="cast-grid">
+    <div class="cast-member">
+      <div class="cast-photo" style="background: rgba(236,228,214,0.06); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Oswald',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.14em; color:var(--bone-dim);">Photo</span></div>
+      <div>
+        <div class="cast-name">[Crew Member Name]</div>
+        <div class="cast-role">[Role]</div>
+        <div class="cast-bio">[Bio goes here.]</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- THANK YOUS -->
+<div class="wrap">
+  <div class="section-label">Gratitude</div>
+  <h2 class="section-title">Thank <em>You.</em></h2>
+  <p style="color: var(--bone-dim); margin-bottom: 32px; line-height: 1.6;">This show exists because of the people below. Sponsors, supporters, believers, friends, and everyone who ever said "you HAVE to see this." The sleigh flies because of you.</p>
+
+  <div class="thanks-list">
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+    [Name]<br>
+  </div>
+</div>
+
+<!-- SPONSOR STRIP 3 (bottom) -->
+<div class="sponsor-strip">
+  <div class="sponsor-card">
+    <div class="sponsor-logo"><span class="sponsor-logo-placeholder">Your Logo Here</span></div>
+    <div class="sponsor-name">Sponsor Name</div>
+    <div class="sponsor-desc">A short description of the sponsor and what they do.</div>
+    <a href="#" class="sponsor-link">Visit &rarr;</a>
+  </div>
+</div>
+
+<div class="section-rule"></div>
+
+<!-- MESSAGE TO SANTA -->
+<div class="wrap" style="text-align: center;">
+  <div class="section-label" style="justify-content: center;"><span style="display:none;"></span>Letters to Santa</div>
+  <h2 class="section-title">Send a Message to <em>Santa.</em></h2>
+  <p style="color: var(--bone-dim); margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6;">Have something to say? A wish? A confession? A request? Drop a line to Kris. He reads every one.</p>
+
+  <form class="message-form" onsubmit="sendMessage(event)">
+    <div class="form-row">
+      <label class="form-label" for="msg-name">Your Name</label>
+      <input type="text" id="msg-name" class="form-input" placeholder="Naughty or Nice?" required>
+    </div>
+    <div class="form-row">
+      <label class="form-label" for="msg-email">Your Email</label>
+      <input type="email" id="msg-email" class="form-input" placeholder="So Santa can write back" required>
+    </div>
+    <div class="form-row">
+      <label class="form-label" for="msg-text">Your Message</label>
+      <textarea id="msg-text" class="form-input" placeholder="Dear Santa..." required></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send to Santa</button>
+  </form>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="includes.js"></script>
+
+<!-- Message form handler -->
+<script>
+function sendMessage(e) {
+  e.preventDefault();
+  var name = document.getElementById('msg-name').value;
+  var email = document.getElementById('msg-email').value;
+  var message = document.getElementById('msg-text').value;
+  var subject = encodeURIComponent('Message to Santa from ' + name);
+  var body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message);
+  window.location.href = 'mailto:BSandtheAE@gmail.com?subject=' + subject + '&body=' + body;
+}
+</script>
+
+<!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->
+<script type="text/javascript">
+var sc_project=13286974; var sc_invisible=1; var sc_security="006598c2";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13286974/0/006598c2/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
