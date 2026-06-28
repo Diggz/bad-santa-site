@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxine's on Shine — Bad Santa and the Angry Elves | World Premiere & Hospitality Night</title>
+<meta name="description" content="Two nights only at Maxine's on Shine. World Premiere of 'Exiled From the North Pole' July 17 &amp; Hospitality Night July 20. Bad Santa and the Angry Elves — Edinburgh Fringe 2026.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/maxines.html">
+<meta property="og:title" content="Maxine's on Shine — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Two nights only. World Premiere July 17 &amp; Hospitality Night July 20. All proceeds help get the band to Edinburgh.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/elves/maxines-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maxine's on Shine — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Two nights only. World Premiere July 17 &amp; Hospitality Night July 20.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/elves/maxines-band.jpg">
+
+<link rel="icon" type="image/jpeg" href="elves/bs-icon.jpg">
+<link rel="apple-touch-icon" href="elves/bs-icon.jpg">
+<link rel="stylesheet" href="includes.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #ccc5b8;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 140px 40px 100px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('elves/maxines-band.jpg') center center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.35;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-venue-logo {
+    width: 200px;
+    margin: 0 auto 24px;
+    display: block;
+    filter: brightness(1.1);
+  }
+  .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    color: var(--blood);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(32px, 5.5vw, 56px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 16px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--blood);
+    display: block;
+    font-size: 0.6em;
+    margin-top: 8px;
+  }
+  .hero p {
+    font-size: 20px;
+    color: var(--bone-dim);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    color: var(--blood);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background: var(--blood);
+  }
+  .section-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--blood);
+  }
+
+  /* ---------- THE NOTE ---------- */
+  .the-note {
+    text-align: center;
+    padding: 60px 40px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .the-note h2 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 24px;
+    color: var(--bone);
+  }
+  .the-note p {
+    font-size: 21px;
+    color: var(--bone-dim);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ---------- SHOW BLOCK ---------- */
+  .show-block {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line);
+  }
+  .show-block:last-of-type {
+    border-bottom: none;
+  }
+  .show-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .show-date-badge {
+    display: inline-block;
+    background: var(--blood);
+    color: var(--bone);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 8px 24px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .show-header h2 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.15;
+    color: var(--bone);
+    margin-bottom: 8px;
+  }
+  .show-header .show-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .show-header .show-exclusive {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone-dim);
+    margin-top: 16px;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- PRICING BANNER ---------- */
+  .pricing-banner {
+    text-align: center;
+    background: rgba(200, 36, 44, 0.08);
+    border: 1px solid rgba(200, 36, 44, 0.3);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+  .pricing-banner .price {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: 36px;
+    color: var(--bone);
+    margin-bottom: 4px;
+  }
+  .pricing-banner .price-includes {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-dim);
+    margin-bottom: 8px;
+  }
+  .pricing-banner .price-note {
+    font-size: 15px;
+    color: var(--bone-dim);
+    font-style: italic;
+  }
+  .pricing-banner .price-note strong {
+    color: var(--blood);
+    font-weight: 600;
+  }
+  .pricing-banner .seats {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-top: 12px;
+  }
+
+  /* ---------- MENU ---------- */
+  .menu-section {
+    margin-bottom: 48px;
+  }
+  .menu-course {
+    margin-bottom: 36px;
+  }
+  .menu-course-title {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: 22px;
+    color: var(--blood);
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+  }
+  .menu-item {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .menu-item-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bone);
+  }
+  .menu-item-name .diet {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+  .menu-item-desc {
+    font-size: 17px;
+    color: var(--bone-dim);
+    font-style: italic;
+    max-width: 560px;
+    margin: 2px auto 0;
+  }
+  .menu-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--line-strong);
+    margin: 32px auto;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline {
+    margin-bottom: 48px;
+  }
+  .timeline h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--blood);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .timeline-list {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+  .timeline-time {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--bone);
+    white-space: nowrap;
+  }
+  .timeline-event {
+    font-size: 17px;
+    color: var(--bone-dim);
+    text-align: right;
+  }
+
+  /* ---------- SPONSOR CALLOUT ---------- */
+  .sponsor-callout {
+    text-align: center;
+    background: rgba(212, 168, 74, 0.08);
+    border: 1px solid rgba(212, 168, 74, 0.25);
+    border-radius: 8px;
+    padding: 24px 32px;
+    margin-bottom: 48px;
+  }
+  .sponsor-callout p {
+    font-size: 17px;
+    color: var(--gold);
+    font-style: italic;
+  }
+  .sponsor-callout .proceeds {
+    font-size: 15px;
+    color: var(--bone-dim);
+    margin-top: 8px;
+    font-style: normal;
+  }
+
+  /* ---------- CTA BUTTON ---------- */
+  .cta-wrap {
+    text-align: center;
+    margin: 48px 0 0;
+  }
+  .cta-btn {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--bone);
+    background: var(--blood);
+    border: 2px solid var(--blood);
+    padding: 14px 40px;
+    border-radius: 6px;
+    transition: all 0.25s;
+    text-decoration: none;
+  }
+  .cta-btn:hover {
+    background: transparent;
+    color: var(--blood);
+  }
+  .cta-btn.secondary {
+    background: transparent;
+    color: var(--bone);
+    border-color: var(--line-strong);
+  }
+  .cta-btn.secondary:hover {
+    border-color: var(--blood);
+    color: var(--blood);
+  }
+
+  /* ---------- FINE PRINT ---------- */
+  .fine-print {
+    text-align: center;
+    font-size: 14px;
+    color: var(--bone-dim);
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+  /* ---------- BACK LINK ---------- */
+  .back-link {
+    text-align: center;
+    padding: 40px;
+  }
+  .back-link a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    transition: color 0.2s;
+  }
+  .back-link a:hover { color: var(--bone); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px) {
+    .hero { padding: 100px 24px 70px; }
+    .the-note { padding: 40px 24px 60px; }
+    .show-block { padding: 60px 24px; }
+    .pricing-banner { padding: 24px 20px; }
+    .sponsor-callout { padding: 20px; }
+    .timeline-list { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <img src="elves/maxines-logo.png" alt="Maxine's on Shine" class="hero-venue-logo">
+    <div class="hero-label">Two Nights Only &middot; Downtown Orlando</div>
+    <h1>Exiled From the North Pole<em>at Maxine's on Shine</em></h1>
+    <p>Before Edinburgh, the greatest holiday band of all time previews their Mythic Immersive Cabaret Rock Opera.</p>
+  </div>
+</div>
+
+<!-- THE NOTE -->
+<div class="the-note">
+  <h2>The Note.</h2>
+  <p>The show tells the story of Kris Kringle IV, thrown out by his immortal father for asking why Christmas only happens once a year &mdash; and the century of unanswered letters that proved him right. He takes the fastest sleigh, his Elves, and a mother's handmade music box, building a ten-year mythology in exile. From Frosty to Bowie, Dickens to Queen, the band summons you onto the ultimate sonic sleigh ride, gets your stocking stuffed, and reminds you what you used to believe.</p>
+</div>
+
+<!-- ===================== NIGHT 1 — WORLD PREMIERE ===================== -->
+<div class="show-block" id="premiere">
+  <div class="show-header">
+    <div class="show-date-badge">Friday, July 17th</div>
+    <h2>World Premiere</h2>
+    <div class="show-subtitle">"Exiled From the North Pole"</div>
+    <p class="show-exclusive">The only exclusive full performance of the show in the United States prior to unveiling on the world's largest Fringe Fest in Edinburgh, Scotland.</p>
+  </div>
+
+  <!-- Pricing -->
+  <div class="pricing-banner">
+    <div class="price">$89 per person</div>
+    <div class="price-includes">Supper Club &middot; Three-Course Prix Fixe &middot; Dinner, Show, Tax, Tip &amp; 4% Card Fee</div>
+    <div class="price-note">(Alcohol, additional purchases &amp; applicable charges separate) &middot; <strong>No Refunds</strong></div>
+    <div class="seats">Limited to 50 Seats &middot; Communal Seating at House Discretion</div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h3>Timeline</h3>
+    <div class="timeline-list">
+      <div class="timeline-item"><span class="timeline-time">5:30</span><span class="timeline-event">Doors &amp; Drinks</span></div>
+      <div class="timeline-item"><span class="timeline-time">6:00</span><span class="timeline-event">Dinner, Service &amp; Silent Auction Opens</span></div>
+      <div class="timeline-item"><span class="timeline-time">6:15</span><span class="timeline-event">Special Opening Act</span></div>
+      <div class="timeline-item"><span class="timeline-time">6:45</span><span class="timeline-event">Intermission</span></div>
+      <div class="timeline-item"><span class="timeline-time">7:00</span><span class="timeline-event">The Show</span></div>
+      <div class="timeline-item"><span class="timeline-time">8:30</span><span class="timeline-event">Show Wraps</span></div>
+      <div class="timeline-item"><span class="timeline-time">8:45</span><span class="timeline-event">Silent Auction Closes &amp; Photo Ops</span></div>
+      <div class="timeline-item"><span class="timeline-time">9:00</span><span class="timeline-event">Post-Show Party</span></div>
+      <div class="timeline-item"><span class="timeline-time">10:00</span><span class="timeline-event">All Sleighs Depart</span></div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu-section">
+    <div class="menu-course">
+      <div class="menu-course-title">Opening Acts</div>
+      <div class="menu-item">
+        <div class="menu-item-name">Conch Chowder <span class="diet">(GF)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Fried Green Tomatoes w/ Pimento Cheese <span class="diet">(V)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Garden Nachos <span class="diet">(V) (VG &amp; GF options)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Cheese Cigars w/ Pomodoro <span class="diet">(V)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Caprese Salad Panzanella <span class="diet">(V) (VG &amp; GF options)</span></div>
+      </div>
+    </div>
+
+    <div class="menu-divider"></div>
+
+    <div class="menu-course">
+      <div class="menu-course-title">Mainstage</div>
+      <div class="menu-item">
+        <div class="menu-item-name">Thee Burger</div>
+        <div class="menu-item-desc">Half-pound, choice black angus, thick cut bacon, cheddar, fried green tomato, sunny side up egg, bacon jam, kaiser roll, Texas cut steak fries</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">North Atlantic Salmon <span class="diet">(GF)</span></div>
+        <div class="menu-item-desc">Pan seared, crispy spinach, tarragon mustard cream sauce, sweet potato puree, zucchini</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Braised Brisket w/ Mushroom Bordelais</div>
+        <div class="menu-item-desc">Pulled, chive mashed potato, green beans &amp; carrots</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Zucchini Zoodles w/ Vegan Meatballs <span class="diet">(VG) (GF)</span></div>
+        <div class="menu-item-desc">Impossible Meat, tofu shreds, pomodoro</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Chicken Milanese</div>
+        <div class="menu-item-desc">Lightly breaded &amp; pounded thin chicken cutlets, pan-seared, arugula salad, lemon balsamic vinaigrette</div>
+      </div>
+    </div>
+
+    <div class="menu-divider"></div>
+
+    <div class="menu-course">
+      <div class="menu-course-title">Encore</div>
+      <div class="menu-item">
+        <div class="menu-item-name">Key Lime Pie <span class="diet">(V)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Turtle Brownie <span class="diet">(V)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Salted Caramel Cheesecake <span class="diet">(V)</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Berries Romanoff <span class="diet">(V) (GF) (VG w/o cream)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jameson Sponsor -->
+  <div class="sponsor-callout">
+    <p>Jameson Irish Whiskey is a proud sponsor of this show &amp; a portion of all Jameson drinks sold will go directly to the band.</p>
+    <div class="proceeds">$15 of each ticket goes to the band, plus 100% of Silent Auction, Swag Sales &amp; Donations.</div>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://maxinesonshine.com/" target="_blank" class="cta-btn">Get Tickets at Maxine's ↗</a>
+  </div>
+  <p class="fine-print">Ticket purchase required. No coupons, discounts, or barter bucks for this show.</p>
+</div>
+
+<!-- ===================== NIGHT 2 — HOSPITALITY NIGHT ===================== -->
+<div class="show-block" id="hospitality">
+  <div class="show-header">
+    <div class="show-date-badge">Monday, July 20th</div>
+    <h2>Hospitality Night</h2>
+    <div class="show-subtitle">"Presents That Didn't Fit Under the Tree"</div>
+    <p class="show-exclusive">The crew brings a collection of the most bad-ass selections from their bag full of annual musical rift gifts. A one-off, let-it-rip show for all the hospitality kids &mdash; good or bad &mdash; of the ORL scene.</p>
+  </div>
+
+  <!-- Pricing -->
+  <div class="pricing-banner">
+    <div class="price">$15 advance &middot; $20 at the door</div>
+    <div class="price-includes">Limited Feature Menu &amp; Open Bar</div>
+    <div class="price-note">First 50 seats advance &middot; Standing room only at the door &middot; <strong>No Refunds</strong></div>
+    <div class="seats">100% of Ticket Sales &amp; Door Charge Goes to the Band</div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h3>Timeline</h3>
+    <div class="timeline-list">
+      <div class="timeline-item"><span class="timeline-time">6:00</span><span class="timeline-event">Doors, Drinks &amp; Food</span></div>
+      <div class="timeline-item"><span class="timeline-time">6:30</span><span class="timeline-event">1st Set</span></div>
+      <div class="timeline-item"><span class="timeline-time">7:30</span><span class="timeline-event">Intermission</span></div>
+      <div class="timeline-item"><span class="timeline-time">8:00</span><span class="timeline-event">2nd Set</span></div>
+      <div class="timeline-item"><span class="timeline-time">9:00</span><span class="timeline-event">Show Wraps</span></div>
+      <div class="timeline-item"><span class="timeline-time">9:15</span><span class="timeline-event">Photo Ops &amp; Shots</span></div>
+      <div class="timeline-item"><span class="timeline-time">10:00</span><span class="timeline-event">All Sleighs Depart</span></div>
+    </div>
+  </div>
+
+  <!-- Jameson Sponsor -->
+  <div class="sponsor-callout">
+    <p>Jameson Irish Whiskey is a proud sponsor &mdash; a portion of Jameson drink specials &amp; 100% of your direct donations goes to the band.</p>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://maxinesonshine.com/" target="_blank" class="cta-btn">Get Tickets at Maxine's ↗</a>
+  </div>
+  <p class="fine-print">Communal seating at house discretion.</p>
+</div>
+
+<!-- BACK -->
+<div class="back-link">
+  <a href="shows.html">&larr; All Shows</a>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="includes.js"></script>
+<!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->
+<script type="text/javascript">
+var sc_project=13286974; var sc_invisible=1; var sc_security="006598c2";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13286974/0/006598c2/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>
