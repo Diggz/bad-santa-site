@@ -89,7 +89,7 @@
     min-height: 92vh;
     display: flex; flex-direction: column; justify-content: center;
     align-items: center;
-    padding: 80px 40px 60px;
+    padding: 0 40px 60px;
     border-bottom: 1px solid var(--line-strong);
     overflow: hidden;
     text-align: center;
@@ -118,7 +118,7 @@
   }
   .hero-title-sub {
     font-family: 'Bungee Inline', sans-serif;
-    font-size: clamp(22px, 4vw, 44px);
+    font-size: clamp(26px, 4.8vw, 53px);
     text-transform: uppercase;
     color: var(--holly);
     line-height: 1;
@@ -127,7 +127,16 @@
   .hero-subtitle {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--bone);
+    margin-bottom: 6px;
+  }
+  .hero-fringe {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--gold);
@@ -159,7 +168,7 @@
   .hero-venue:hover { color: var(--bone); }
   .hero-info {
     font-family: 'Oswald', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--bone-dim);
@@ -191,31 +200,31 @@
     padding: 80px 40px;
     border-bottom: 1px solid var(--line);
   }
-  .voices .wrap { max-width: 900px; margin: 0 auto; }
+  .voices .wrap { max-width: 1100px; margin: 0 auto; }
   .voices-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
   }
   .voice {
-    padding: 24px 28px;
-    border-left: 2px solid var(--blood);
+    padding: 32px 36px;
+    border-left: 3px solid var(--blood);
     background: rgba(236, 228, 214, 0.03);
   }
   .voice-quote {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 19px;
-    line-height: 1.4;
+    font-size: 38px;
+    line-height: 1.25;
     color: var(--bone);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .voice-src {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    font-size: 11px;
+    font-size: 16px;
     color: var(--bone-dim);
   }
   .voice-src a { color: var(--bone-dim); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
@@ -428,7 +437,7 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 880px) {
-    .hero { padding: 60px 24px 40px; }
+    .hero { padding: 0 24px 40px; }
     section { padding: 70px 24px; }
     .poster-grid { grid-template-columns: repeat(2, 1fr); }
     .voices { padding: 60px 24px; }
@@ -454,8 +463,9 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-title">Bad Santa</div>
-    <div class="hero-title-sub">& The Angry Elves</div>
-    <div class="hero-subtitle">Edinburgh Fringe 2026 &middot; A Mythic Immersive Cabaret Rock Opera</div>
+    <div class="hero-title-sub">And The Angry Elves</div>
+    <div class="hero-subtitle">A Mythic Immersive Cabaret Rock Opera</div>
+    <div class="hero-fringe">Edinburgh Fringe 2026</div>
     <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-date">August 6–30 &middot; 21:30</a>
     <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-venue">Just The Tonic at The Caves &middot; Venue 88</a>
     <div class="hero-info">90 min &middot; £15 &middot; Ages 16+ &middot; Strong language</div>
