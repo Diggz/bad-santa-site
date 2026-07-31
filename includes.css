@@ -193,10 +193,34 @@ footer .footer-links a {
 }
 footer .footer-links a:hover { color: var(--bone); }
 
+/* ---------- STICKY MOBILE TICKET BAR ---------- */
+.sticky-ticket-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 49;
+  background: var(--blood);
+  text-align: center;
+  padding: 0;
+}
+.sticky-ticket-bar a {
+  display: block;
+  padding: 14px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bone);
+  text-decoration: none;
+}
+
 /* ---------- RESPONSIVE NAV ---------- */
 @media (max-width: 880px) {
   .topbar { padding: 12px 20px; }
   .topbar-brand { font-size: 11px; letter-spacing: 0.12em; }
   .topbar-links { display: none; }
   .hamburger { display: block; }
+  .sticky-ticket-bar { display: block; }
+  body { padding-bottom: 52px; } /* space for sticky bar */
 }

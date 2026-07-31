@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bad Santa and the Angry Elves — Edinburgh Fringe 2026 | Mythical Cabaret Rock Opera</title>
-<meta name="description" content="Over a decade of Christmas chaos. Now Bad Santa and the Angry Elves are headed to the Edinburgh Fringe Festival 2026 — 25 nights, one cave, 80 seats. Help land the sleigh.">
+<meta name="description" content="A Mythic Immersive Cabaret Rock Opera. Bad Santa and the Angry Elves at Edinburgh Fringe 2026. August 6–30, Just The Tonic at The Caves. Tickets £15.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://badsantaandtheangryelves.com/">
-<meta property="og:title" content="Bad Santa and the Angry Elves — The Sleigh Is Going to Scotland">
-<meta property="og:description" content="Over a decade of Christmas chaos. Now we're headed to Edinburgh Fringe 2026 — 25 nights in a stone cave under the city. Help land the sleigh.">
+<meta property="og:title" content="Bad Santa and the Angry Elves — Edinburgh Fringe 2026">
+<meta property="og:description" content="A Mythic Immersive Cabaret Rock Opera. August 6–30 at Just The Tonic at The Caves. Tickets £15.">
 <meta property="og:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bad Santa and the Angry Elves — The Sleigh Is Going to Scotland">
-<meta name="twitter:description" content="Over a decade of Christmas chaos. Edinburgh Fringe 2026 — 25 nights, one cave. Help land the sleigh.">
+<meta name="twitter:title" content="Bad Santa and the Angry Elves — Edinburgh Fringe 2026">
+<meta name="twitter:description" content="A Mythic Immersive Cabaret Rock Opera. August 6–30 at The Caves. Tickets £15.">
 <meta name="twitter:image" content="https://badsantaandtheangryelves.com/hero-band.jpg">
 <link rel="icon" type="image/jpeg" href="elves/bs-icon.jpg">
 <link rel="apple-touch-icon" href="elves/bs-icon.jpg">
@@ -49,84 +49,11 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  .display {
-    font-family: 'Bungee Inline', 'Oswald', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 0.95;
-    text-transform: uppercase;
-  }
-  .stencil {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .label {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 12px;
-    color: var(--bone-dim);
-  }
   a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
   a:hover { color: var(--bone); }
   ::selection { background: var(--blood); color: var(--bone); }
 
-  /* ---------- HERO ---------- */
-  .hero {
-    position: relative;
-    min-height: 92vh;
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 0 40px 60px;
-    border-bottom: 1px solid var(--line-strong);
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse at 70% 30%, rgba(200, 36, 44, 0.22), transparent 55%),
-      radial-gradient(ellipse at 20% 80%, rgba(31, 95, 58, 0.18), transparent 50%),
-      var(--black);
-  }
-  .hero-img-placeholder {
-    position: absolute; inset: 0;
-    background: url('hero-band.jpg') top center/cover no-repeat;
-    /* Fallback gradient when no image file present */
-    background-color: #1a1a1a;
-  }
-  .hero-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.95) 100%);
-  }
-  .hero-content { position: relative; max-width: 1100px; z-index: 2; }
-  .hero-eyebrow {
-    display: inline-block;
-    padding: 6px 14px;
-    background: var(--blood);
-    color: var(--bone);
-    margin-bottom: 28px;
-  }
-  .hero h1 {
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: clamp(48px, 9vw, 132px);
-    line-height: 0.9;
-    text-transform: uppercase;
-    color: var(--bone);
-    margin-bottom: 28px;
-  }
-  .hero h1 .accent { color: var(--blood); display: block; }
-  .hero-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(20px, 2.4vw, 28px);
-    color: var(--bone);
-    max-width: 720px;
-    margin-bottom: 40px;
-    line-height: 1.35;
-  }
-  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+  /* ---------- COUNTDOWN ---------- */
   .countdown {
     display: flex;
     justify-content: center;
@@ -135,6 +62,16 @@
     padding: 10px 32px;
     background: var(--blood-dark);
     border-bottom: 1px solid rgba(236, 228, 214, 0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .countdown:hover { background: var(--blood); }
+  .countdown a {
+    color: var(--bone);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
   .countdown-number,
   .countdown-label {
@@ -145,28 +82,111 @@
     letter-spacing: 0.18em;
     color: var(--bone);
   }
-  .btn {
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 40px 60px;
+    border-bottom: 1px solid var(--line-strong);
+    overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('hero-band.jpg') top center/cover no-repeat;
+    background-color: #1a1a1a;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.5) 40%, rgba(10,10,10,0.92) 100%);
+  }
+  .hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 2;
+  }
+  .hero-show-name {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: clamp(42px, 8vw, 100px);
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--bone);
+    margin-bottom: 8px;
+  }
+  .hero-show-name .accent { color: var(--blood); display: block; }
+  .hero-subtitle {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero-details {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bone-dim);
+    line-height: 1.8;
+    margin-bottom: 8px;
+  }
+  .hero-details strong {
+    color: var(--bone);
+    font-weight: 600;
+  }
+  .hero-manifesto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.2vw, 24px);
+    color: var(--bone);
+    margin: 20px 0 32px;
+    max-width: 600px;
+    line-height: 1.4;
+  }
+  .hero-cta {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    font-size: 13px;
-    padding: 16px 28px;
-    border: 1.5px solid var(--blood);
+    font-size: 16px;
+    padding: 18px 40px;
+    border: 2px solid var(--blood);
     background: var(--blood);
     color: var(--bone);
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-block;
+    transition: all 0.25s;
+    text-decoration: none;
   }
-  .btn:hover { background: transparent; color: var(--blood); }
-  .btn.ghost { background: transparent; color: var(--bone); border-color: var(--bone); }
-  .btn.ghost:hover { background: var(--bone); color: var(--black); }
+  .hero-cta:hover { background: transparent; color: var(--blood); }
+  .hero-cta .price {
+    font-weight: 400;
+    opacity: 0.85;
+    margin-left: 8px;
+  }
 
-  /* ---------- SECTION FRAME ---------- */
+  /* ---------- MANIFESTO STRIP ---------- */
+  .manifesto {
+    background: var(--blood);
+    color: var(--bone);
+    padding: 60px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .manifesto p {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: clamp(28px, 4.5vw, 52px);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .manifesto p + p { margin-top: 8px; font-size: clamp(18px, 2.5vw, 28px); letter-spacing: 0.12em; }
+
+  /* ---------- SECTIONS ---------- */
   section { padding: 100px 40px; border-bottom: 1px solid var(--line); position: relative; }
   .wrap { max-width: 1100px; margin: 0 auto; }
-  .wrap-narrow { max-width: 760px; margin: 0 auto; }
   .section-eyebrow {
     display: inline-block;
     color: var(--blood);
@@ -195,152 +215,15 @@
   }
   h2.section-h .accent { color: var(--blood); }
 
-  /* ---------- LETTER ---------- */
-  .letter p {
+  /* ---------- LORE ---------- */
+  .lore-text {
+    max-width: 680px;
     font-size: 21px;
+    color: var(--bone-dim);
     line-height: 1.65;
-    margin-bottom: 22px;
-    color: var(--bone);
   }
-  .letter p.lift {
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: clamp(28px, 4vw, 48px);
-    color: var(--blood);
-    line-height: 1;
-    margin: 50px 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .letter .signoff {
-    margin-top: 40px;
-    color: var(--bone-dim);
-    font-style: italic;
-  }
-
-  /* ---------- DOCTRINE ---------- */
-  .doctrine {
-    background: var(--blood);
-    color: var(--bone);
-    padding: 80px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--line);
-  }
-  .doctrine p {
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: clamp(32px, 5vw, 60px);
-    line-height: 1.05;
-    text-transform: uppercase;
-    margin: 0;
-  }
-  .doctrine p + p { margin-top: 12px; }
-
-  /* ---------- EDINBURGH FACTS ---------- */
-  .facts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1px;
-    background: var(--line-strong);
-    border: 1px solid var(--line-strong);
-    margin-top: 40px;
-  }
-  .fact {
-    background: var(--black);
-    padding: 32px 28px;
-  }
-  .fact .label { display: block; margin-bottom: 14px; }
-  .fact .val {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: var(--bone);
-    line-height: 1.05;
-    text-transform: uppercase;
-  }
-  .fact .val .sub {
-    display: block;
-    font-size: 14px;
-    color: var(--bone-dim);
-    font-weight: 400;
-    margin-top: 6px;
-    letter-spacing: 0.04em;
-  }
-
-  /* ---------- POSTER WALL ---------- */
-  .poster-intro { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 48px; }
-  .poster-intro p { max-width: 480px; color: var(--bone-dim); font-size: 18px; }
-  .poster-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-  }
-  .poster {
-    background: #1a1a1a;
-    border: 1px solid var(--line);
-    display: flex; flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .poster:hover { transform: translateY(-4px); border-color: var(--blood); }
-  .poster-img {
-    aspect-ratio: 1/1;
-    position: relative;
-    background: #1a1a1a;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--bone-dim);
-    font-family: 'Oswald', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 8px;
-  }
-  .poster-img[data-year]::before {
-    content: attr(data-year);
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: 42px;
-    color: var(--blood);
-    opacity: 0.25;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  .poster-img[style*="background-image"]::before { display: none; }
-
-  /* Individual poster image references */
-  .poster-img[data-year="2016"] { background-image: url('posters/poster-2016.jpg'); }
-  .poster-img[data-year="2017"] { background-image: url('posters/poster-2017.jpg'); }
-  .poster-img[data-year="2018"] { background-image: url('posters/poster-2018.jpg'); }
-  .poster-img[data-year="2019"] { background-image: url('posters/poster-2019.jpg'); }
-  .poster-img[data-year="2020a"] { background-image: url('posters/poster-2020a.jpg'); }
-  .poster-img[data-year="2020b"] { background-image: url('posters/poster-2020b.jpg'); }
-  .poster-img[data-year="2022"] { background-image: url('posters/poster-2022.jpg'); }
-  .poster-img[data-year="2023"] { background-image: url('posters/poster-2023.jpg'); }
-  .poster-img[data-year="2024"] { background-image: url('posters/poster-2024.jpg'); }
-  .poster-img[data-year="2025"] { background-image: url('posters/poster-2025.jpg'); }
-  .poster-meta {
-    padding: 10px 10px 12px;
-    border-left: 2px solid var(--blood);
-    margin: 0 8px 8px;
-  }
-  .poster-year {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    color: var(--blood);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-  }
-  .poster-title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    color: var(--bone);
-    font-size: 12px;
-    line-height: 1.2;
-    margin-top: 3px;
-  }
+  .lore-text p { margin-bottom: 20px; }
+  .lore-text strong { color: var(--bone); font-weight: 600; }
 
   /* ---------- MEET THE ELVES ---------- */
   .elves-grid {
@@ -399,195 +282,144 @@
     line-height: 1.5;
   }
 
-  /* ---------- SUPPORT TIERS ---------- */
-  .support-intro { margin-bottom: 48px; }
-  .support-intro p { font-size: 21px; max-width: 680px; color: var(--bone); }
-
-  .tier-section + .tier-section { margin-top: 64px; }
-  .tier-section-h {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--bone);
-    font-size: 14px;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--line-strong);
-  }
-  .tier-section-h .accent { color: var(--blood); }
-
-  .tier-grid {
+  /* ---------- ARCHIVE STRIP ---------- */
+  .poster-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 32px;
   }
-  .tier {
-    background: #131313;
+  .poster {
+    background: #1a1a1a;
     border: 1px solid var(--line);
-    padding: 28px 24px;
-    position: relative;
-    transition: all 0.2s;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
   }
-  .tier:hover { border-color: var(--blood); }
-  .tier-amount {
-    font-family: 'Bungee Inline', sans-serif;
-    color: var(--blood);
-    font-size: 38px;
-    line-height: 1;
-    margin-bottom: 12px;
+  .poster:hover { transform: translateY(-3px); border-color: var(--blood); }
+  .poster-img {
+    aspect-ratio: 1/1;
+    background: #1a1a1a;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .tier-name {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--bone);
-    font-size: 13px;
-    margin-bottom: 16px;
-  }
-  .tier-desc {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--bone-dim);
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .tier-link {
-    display: inline-block;
-    margin-top: 18px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 11px;
-    color: var(--blood);
-    border-bottom: 1px solid var(--blood);
-    padding-bottom: 3px;
-  }
-  .tier-link:hover { color: var(--bone); border-color: var(--bone); }
-
-  /* SPONSOR specific */
-  .sponsor-tier { background: #131313; border: 1px solid var(--line); }
-  .sponsor-tier .tier-amount { color: var(--gold); }
-  .sponsor-tier:hover { border-color: var(--gold); }
-  .sponsor-tier .tier-link { color: var(--gold); border-color: var(--gold); }
-
-  /* EXEC PRODUCER specific */
-  .exec-box {
-    background: var(--black);
-    border: 1px solid var(--gold);
-    padding: 56px 48px;
-    margin-top: 24px;
-  }
-  .exec-box h3 {
-    font-family: 'Bungee Inline', sans-serif;
-    color: var(--gold);
-    font-size: clamp(28px, 3vw, 40px);
-    line-height: 1;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-  }
-  .exec-box p { color: var(--bone); margin-bottom: 16px; font-size: 18px; }
-  .exec-list {
-    list-style: none;
-    margin: 28px 0;
-    columns: 2;
-    column-gap: 40px;
-  }
-  .exec-list li {
-    color: var(--bone);
-    padding: 6px 0 6px 22px;
-    position: relative;
-    font-size: 16px;
-    break-inside: avoid;
-  }
-  .exec-list li::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 14px;
-    width: 10px; height: 1.5px;
-    background: var(--gold);
-  }
-  .exec-cta {
-    display: inline-block;
-    margin-top: 24px;
-    background: var(--gold);
-    color: var(--black);
-    padding: 14px 28px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 13px;
-  }
-  .exec-cta:hover { background: var(--bone); color: var(--black); }
-
-  /* ---------- VOICES / PRESS ---------- */
-  .voices-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-top: 40px;
-  }
-  .voice {
-    padding: 32px;
+  .poster-img[data-year="2016"] { background-image: url('posters/poster-2016.jpg'); }
+  .poster-img[data-year="2017"] { background-image: url('posters/poster-2017.jpg'); }
+  .poster-img[data-year="2018"] { background-image: url('posters/poster-2018.jpg'); }
+  .poster-img[data-year="2019"] { background-image: url('posters/poster-2019.jpg'); }
+  .poster-img[data-year="2020a"] { background-image: url('posters/poster-2020a.jpg'); }
+  .poster-img[data-year="2020b"] { background-image: url('posters/poster-2020b.jpg'); }
+  .poster-img[data-year="2022"] { background-image: url('posters/poster-2022.jpg'); }
+  .poster-img[data-year="2023"] { background-image: url('posters/poster-2023.jpg'); }
+  .poster-img[data-year="2024"] { background-image: url('posters/poster-2024.jpg'); }
+  .poster-img[data-year="2025"] { background-image: url('posters/poster-2025.jpg'); }
+  .poster-meta {
+    padding: 8px 10px;
     border-left: 2px solid var(--blood);
-    background: #131313;
+    margin: 0 6px 6px;
   }
-  .voice-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 22px;
-    line-height: 1.4;
+  .poster-year {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: var(--blood);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .poster-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     color: var(--bone);
-    margin-bottom: 18px;
+    font-size: 11px;
+    line-height: 1.2;
+    margin-top: 2px;
   }
-  .voice-src {
+  .archive-listen {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .archive-listen iframe { border-radius: 8px; }
+
+  /* ---------- TICKET BLOCK ---------- */
+  .ticket-block {
+    text-align: center;
+    padding: 100px 40px;
+    background: var(--black);
+  }
+  .ticket-block .section-eyebrow { margin-bottom: 24px; }
+  .ticket-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--line-strong);
+    border: 1px solid var(--line-strong);
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+  }
+  .ticket-fact {
+    background: var(--black);
+    padding: 28px 24px;
+  }
+  .ticket-fact .label {
+    display: block;
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 12px;
+    letter-spacing: 0.22em;
+    font-size: 11px;
     color: var(--bone-dim);
+    margin-bottom: 10px;
   }
-
-  /* ---------- FINAL CTA ---------- */
-  .final {
-    background: #0a0a0a;
-    padding: 140px 40px;
-    text-align: center;
-    border-bottom: 1px solid var(--line);
-  }
-  .final p {
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.1;
+  .ticket-fact .val {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
     color: var(--bone);
     text-transform: uppercase;
-    margin-bottom: 12px;
-    max-width: 900px;
-    margin-left: auto; margin-right: auto;
+    line-height: 1.15;
   }
-  .final p.red { color: var(--blood); }
-  .final p.small {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 22px;
-    text-transform: none;
+  .ticket-fact .val .sub {
+    display: block;
+    font-size: 13px;
+    color: var(--bone-dim);
+    font-weight: 400;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+  .ticket-cta {
+    display: inline-block;
+    margin-top: 48px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px 52px;
+    border: 2px solid var(--blood);
+    background: var(--blood);
     color: var(--bone);
-    margin: 40px auto;
-    max-width: 600px;
-    line-height: 1.5;
+    transition: all 0.25s;
+    text-decoration: none;
   }
-  .final .btn { margin-top: 32px; padding: 20px 44px; font-size: 14px; }
+  .ticket-cta:hover { background: transparent; color: var(--blood); }
+  .ticket-advisory {
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+  }
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 880px) {
     .hero { padding: 0 24px 40px; }
     section { padding: 70px 24px; }
     .poster-grid { grid-template-columns: repeat(2, 1fr); }
-    .exec-list { columns: 1; }
+    .ticket-facts { grid-template-columns: repeat(2, 1fr); }
+    .ticket-block { padding: 70px 24px; }
   }
 </style>
 </head>
@@ -597,187 +429,51 @@
 
 <!-- COUNTDOWN -->
 <div class="countdown">
-  <span class="countdown-number" id="countdown-days"></span>
-  <span class="countdown-label">Days to Edinburgh</span>
+  <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank">
+    <span class="countdown-number" id="countdown-days"></span>
+    <span class="countdown-label" id="countdown-text">Days Until Opening Night</span>
+  </a>
 </div>
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-img-placeholder"></div>
+  <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow stencil">Living in the Presents</span>
-    <h1>The Sleigh<br>Is Going<br><span class="accent">To Scotland.</span></h1>
-    <p class="hero-sub">For over a decade, Orlando helped us build this weird little Christmas miracle. Now Bad Santa and the Angry Elves are headed to the Edinburgh Fringe Festival — 25 nights, one stage in a stone cave under the city, the biggest arts festival on the planet.</p>
-    <div class="hero-ctas">
-      <a href="#support" class="btn">Support the Show</a>
-      <a href="sponsor.html" class="btn ghost">Become a Sponsor</a>
+    <div class="hero-show-name">Bad Santa<span class="accent">& The Angry Elves</span></div>
+    <div class="hero-subtitle">Edinburgh Fringe 2026 &middot; A Mythic Immersive Cabaret Rock Opera</div>
+    <div class="hero-details">
+      <strong>August 6–30</strong>, selected dates<br>
+      <strong>21:30</strong><br>
+      Just The Tonic at The Caves &middot; <strong>Venue 88</strong>
     </div>
+    <p class="hero-manifesto">Christmas belongs to every day. The North Pole disagreed. So we took the sleigh.</p>
+    <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-cta">Get Tickets<span class="price">&middot; £15</span></a>
   </div>
 </header>
 
-<!-- LETTER -->
-<section class="letter">
-  <div class="wrap-narrow">
-    <span class="section-eyebrow">From Kris Kringle IV</span>
-    <h2 class="section-h">A Word From <span class="accent">Bad Santa.</span></h2>
-
-    <p>Over a decade ago this started as a ridiculous idea: play rock and roll Christmas shows with our friends.</p>
-
-    <p>Somehow it became a tradition. A mythology. A family. A ritual.</p>
-
-    <p>This year, Bad Santa and the Angry Elves were officially invited to perform at the Edinburgh Fringe Festival in Scotland — the largest arts festival in the world. 3,500 shows. 250 venues. 79 years of history. And on August 6th, we land the sleigh there for a 25-night run.</p>
-
-    <p>We could have landed our sleigh anywhere. We came to Orlando. And what started here — and what it's become — is beyond anything we imagined.</p>
-
-    <p class="lift">"You built this with us.<br>Now we're taking it overseas."</p>
-
-    <p>Every crowded room. Every singalong. Every ridiculous costume. Every shirt purchase. Every friend you dragged to a show. Every person who said "you HAVE to see this."</p>
-
-    <p>That's the energy that makes the sleigh fly. We're carrying every one of you with us to Edinburgh — the heart and soul of the Orlando music scene, the radical idea that Christmas should be celebrated every day, kindness, generosity, joy, and the firm conviction that you shouldn't be a dick.</p>
-
-    <p>Getting there takes a lot. We can't do it alone.</p>
-
-    <p>If you've ever come to a show — help us land this thing in Scotland.</p>
-
-    <p class="signoff">— Kris Kringle IV<br>Bad Santa, The Angry Elves</p>
-  </div>
-</section>
-
-<!-- DOCTRINE -->
-<div class="doctrine">
-  <p>Christmas every day.</p>
-  <p>Kindness, generosity, joy.</p>
-  <p>Don't be a dick.</p>
+<!-- MANIFESTO STRIP -->
+<div class="manifesto">
+  <p>Christmas Every Day.</p>
+  <p>Kindness &middot; Joy &middot; Gratitude</p>
 </div>
 
-<!-- EDINBURGH FACTS -->
-<section id="tickets">
+<!-- LORE -->
+<section id="lore">
   <div class="wrap">
-    <span class="section-eyebrow">Edinburgh Fringe 2026</span>
-    <h2 class="section-h">25 Nights.<br><span class="accent">One Cave.</span> 80 Seats.</h2>
-    <p style="max-width: 680px; color: var(--bone-dim); font-size: 21px;">
-      Just The Tonic at The Caves is one of the foundational pillars of the Fringe. Our room — Just Up The Road — is exactly the size that built this show: small, intimate, and lit like a rock club. Same rules apply. Tinsel optional.
-    </p>
-    <div class="facts-grid">
-      <div class="fact">
-        <span class="label">Run</span>
-        <div class="val">Aug 6–30<span class="sub">25 nights, 2026</span></div>
-      </div>
-      <div class="fact">
-        <span class="label">Venue</span>
-        <div class="val">The Caves<span class="sub">Just The Tonic, Edinburgh</span></div>
-      </div>
-      <div class="fact">
-        <span class="label">Show Time</span>
-        <div class="val">21:30<span class="sub">90 minutes</span></div>
-      </div>
-      <div class="fact">
-        <span class="label">Tickets</span>
-        <div class="val">£15<span class="sub"><a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank">Buy direct ↗</a></span></div>
-      </div>
-    </div>
-
-    <div style="margin-top: 48px; border-top: 1px solid var(--line); padding-top: 40px;">
-      <span class="section-eyebrow">Before We Go</span>
-      <h2 class="section-h" style="margin-bottom: 16px;">Preview <span class="accent">Shows.</span></h2>
-      <p style="max-width: 680px; color: var(--bone-dim); font-size: 21px; margin-bottom: 24px;">
-        Before we land the sleigh in Scotland, we're warming up on home turf. Every Orlando show is a fundraiser — all proceeds go toward getting the band to Edinburgh. Come send us off.
-      </p>
-      <a href="shows.html" class="btn ghost" style="display: inline-block;">See Shows &amp; Tickets →</a>
-    </div>
-  </div>
-</section>
-
-<!-- POSTER WALL -->
-<section>
-  <div class="wrap">
-    <div class="poster-intro">
-      <div>
-        <span class="section-eyebrow">The Archive</span>
-        <h2 class="section-h">Ten+ Years.<br><span class="accent">Ten+ Sleighs.</span></h2>
-      </div>
-      <p>Every year, a tour. Every tour, a record. Every record cover, a different way of saying the same thing.</p>
-    </div>
-
-    <div class="poster-grid">
-      <div class="poster">
-        <div class="poster-img" data-year="2016"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2016</div>
-          <div class="poster-title">For Those About to Wrap</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2017"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2017</div>
-          <div class="poster-title">Houses of the Holly</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2018"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2018</div>
-          <div class="poster-title">Shout at the Kringle</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2019"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2019</div>
-          <div class="poster-title">The Xmas Tree</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2020a"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2020</div>
-          <div class="poster-title">Deck the Mall</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2020b"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2020</div>
-          <div class="poster-title">Flyin' with the Kringle</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2022"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2022</div>
-          <div class="poster-title">A Very Bowie Xmas</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2023"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2023</div>
-          <div class="poster-title">Elves Cry</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2024"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2024</div>
-          <div class="poster-title">No Sleep 'Til Christmas</div>
-        </div>
-      </div>
-      <div class="poster">
-        <div class="poster-img" data-year="2025"></div>
-        <div class="poster-meta">
-          <div class="poster-year">2025</div>
-          <div class="poster-title">Blizzard of Claus</div>
-        </div>
-      </div>
+    <span class="section-eyebrow">The Lore</span>
+    <h2 class="section-h">Exiled From<br>The <span class="accent">North Pole.</span></h2>
+    <div class="lore-text">
+      <p>Kris Kringle IV asked his father one question: <strong>why does Christmas only happen once a year?</strong></p>
+      <p>For that, he was cast out. Exiled from the North Pole with nothing but the fastest sleigh, his Elves, and a mother's handmade music box.</p>
+      <p>He landed in Orlando and spent a decade building a mythology in exile — a rock-and-roll Christmas rebellion that proved him right. From Frosty to Bowie, Dickens to Queen, the band built the ultimate sonic sleigh ride.</p>
+      <p><strong>Now they're bringing the rebellion to Edinburgh.</strong></p>
     </div>
   </div>
 </section>
 
 <!-- MEET THE ELVES -->
-<section>
+<section id="elves">
   <div class="wrap">
     <span class="section-eyebrow">The Roster</span>
     <h2 class="section-h">Meet The <span class="accent">Elves.</span></h2>
@@ -826,123 +522,100 @@
   </div>
 </section>
 
-<!-- WHAT IT TAKES / SUPPORT -->
-<section id="support">
-  <div class="wrap">
-    <span class="section-eyebrow">The Ask</span>
-    <h2 class="section-h">$20K to Land<br>The Sleigh.</h2>
-
-    <div class="support-intro">
-      <p>Flights for the band. Lodging for a month in Edinburgh. Venue costs. Production. Marketing. Getting a bunch of elves through customs without international incident. We're raising $20,000. Every contribution gets us closer to liftoff.</p>
-    </div>
-
-    <!-- INDIVIDUAL TIERS -->
-    <div class="tier-section">
-      <h3 class="tier-section-h">Individual <span class="accent">Support</span></h3>
-      <div class="tier-grid">
-        <div class="tier">
-          <div class="tier-amount">$25</div>
-          <div class="tier-name">I Believe</div>
-          <div class="tier-desc">Help keep the sleigh airborne.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
-        </div>
-        <div class="tier">
-          <div class="tier-amount">$50</div>
-          <div class="tier-name">Christmas Every Day</div>
-          <div class="tier-desc">Help fund the rebellion.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
-        </div>
-        <div class="tier">
-          <div class="tier-amount">$100</div>
-          <div class="tier-name">North Pole Resistance</div>
-          <div class="tier-desc">Official supporter of the Edinburgh run.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
-        </div>
-        <div class="tier">
-          <div class="tier-amount">$250</div>
-          <div class="tier-name">Keepers of the Flame</div>
-          <div class="tier-desc">Because somebody has to smuggle magic through customs.</div>
-          <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="tier-link">Contribute →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SPONSORS -->
-    <div class="tier-section" id="sponsors">
-      <h3 class="tier-section-h">Sponsor <span class="accent">the Sleigh</span></h3>
-      <p style="color: var(--bone); font-size: 18px; max-width: 700px; margin-bottom: 28px;">
-        For Orlando businesses, breweries, bars, production partners, and Christmas co-conspirators ready to help launch this show on the world stage. Includes logo placement, social promotion, on-the-ground recognition in Edinburgh, and a real human connection to a real local institution.
-      </p>
-      <div class="tier-grid">
-        <div class="tier sponsor-tier">
-          <div class="tier-amount">$1,000</div>
-          <div class="tier-name">Coal Sponsor</div>
-          <div class="tier-desc">Logo on the digital tour kit. Social shoutouts. Behind-the-scenes content from the run.</div>
-          <a href="sponsor.html" class="tier-link">Learn More →</a>
-        </div>
-        <div class="tier sponsor-tier">
-          <div class="tier-amount">$2,500</div>
-          <div class="tier-name">Reindeer Games</div>
-          <div class="tier-desc">Everything in Coal, plus on-stage recognition in Edinburgh, dedicated social features, and a VIP package back in Orlando.</div>
-          <a href="sponsor.html" class="tier-link">Learn More →</a>
-        </div>
-        <div class="tier sponsor-tier">
-          <div class="tier-amount">$5,000+</div>
-          <div class="tier-name">North Pole Syndicate</div>
-          <div class="tier-desc">Premier sponsor recognition across all Edinburgh promotion, exclusive content access, and a direct line to the band.</div>
-          <a href="sponsor.html" class="tier-link">Learn More →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- EXEC PRODUCER -->
-    <div class="tier-section">
-      <h3 class="tier-section-h">Executive <span class="accent">Producers</span></h3>
-      <div class="exec-box">
-        <h3>Help Launch The Next Chapter.</h3>
-        <p>For those who want to back this thing at the highest level — and become part of what comes after Edinburgh. Executive Producers help fund the theatrical expansion, the Fringe production, media development, and the long-term growth of the show.</p>
-        <ul class="exec-list">
-          <li>Executive Producer credit across all show materials</li>
-          <li>Private monthly production updates from the band</li>
-          <li>VIP access at every Bad Santa show, anywhere</li>
-          <li>Full cast package (merch, signed materials, the works)</li>
-          <li>Direct line to Christian and the creative team</li>
-          <li>Eternal placement on Santa's "Probably Not Damned" list</li>
-        </ul>
-        <a href="producer.html" class="exec-cta">Learn More →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRESS / VOICES -->
+<!-- ARCHIVE -->
 <section>
   <div class="wrap">
-    <span class="section-eyebrow">The Reception</span>
-    <h2 class="section-h">What People<br>Have Been <span class="accent">Saying.</span></h2>
-    <div class="voices-grid">
-      <div class="voice">
-        <div class="voice-quote">"Decadently jolly… stumbling and swearing through sets of rock hits and misses given a deviantly festive sheen."</div>
-        <div class="voice-src">Orlando Weekly</div>
+    <span class="section-eyebrow">The Archive</span>
+    <h2 class="section-h">Ten+ Years. Ten+ <span class="accent">Sleighs.</span></h2>
+
+    <div class="poster-grid">
+      <div class="poster">
+        <div class="poster-img" data-year="2016"></div>
+        <div class="poster-meta"><div class="poster-year">2016</div><div class="poster-title">For Those About to Wrap</div></div>
       </div>
-      <div class="voice">
-        <div class="voice-quote">"Every chaotically festive moment we saw Bad Santa and the Angry Elves at Ten10 Brewing."</div>
-        <div class="voice-src">Orlando Weekly (photo essay)</div>
+      <div class="poster">
+        <div class="poster-img" data-year="2017"></div>
+        <div class="poster-meta"><div class="poster-year">2017</div><div class="poster-title">Houses of the Holly</div></div>
       </div>
-      <div class="voice">
-        <div class="voice-quote">"Part mythical cabaret, part rock opera, all Christmas. This is what happens when elves go rogue."</div>
-        <div class="voice-src">The Band</div>
+      <div class="poster">
+        <div class="poster-img" data-year="2018"></div>
+        <div class="poster-meta"><div class="poster-year">2018</div><div class="poster-title">Shout at the Kringle</div></div>
       </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2019"></div>
+        <div class="poster-meta"><div class="poster-year">2019</div><div class="poster-title">The Xmas Tree</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2020a"></div>
+        <div class="poster-meta"><div class="poster-year">2020</div><div class="poster-title">Deck the Mall</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2020b"></div>
+        <div class="poster-meta"><div class="poster-year">2020</div><div class="poster-title">Flyin' with the Kringle</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2022"></div>
+        <div class="poster-meta"><div class="poster-year">2022</div><div class="poster-title">A Very Bowie Xmas</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2023"></div>
+        <div class="poster-meta"><div class="poster-year">2023</div><div class="poster-title">Elves Cry</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2024"></div>
+        <div class="poster-meta"><div class="poster-year">2024</div><div class="poster-title">No Sleep 'Til Christmas</div></div>
+      </div>
+      <div class="poster">
+        <div class="poster-img" data-year="2025"></div>
+        <div class="poster-meta"><div class="poster-year">2025</div><div class="poster-title">Blizzard of Claus</div></div>
+      </div>
+    </div>
+
+    <!-- Spotify embeds -->
+    <div class="archive-listen">
+      <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/7rswAicEpMB63mRnLNL8hA?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/32r5TGh4mtjGy25Dl4koFa?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/06RlRfC3jWsQmZu4Zce1cl?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/6GBb7u4jmYeXSLCNvmJtbv?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:8px" src="https://open.spotify.com/embed/track/08Z4hbTwLNkdSQ557Ti4gh?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<div class="final">
-  <p class="red">For over a decade, Orlando gave us a place<br>to build this weird little<br>Christmas miracle.</p>
-  <p>Now we're taking it to<br>the world stage.</p>
-  <p class="small">If this show ever made you laugh, sing, cry, believe, or forget your problems for a couple hours — help us get the sleigh to Scotland.</p>
-  <a href="https://www.gofundme.com/f/help-bad-santa-the-angry-elves-rock-edinburgh/donate?source=btn_donate" target="_blank" class="btn">Help Land the Sleigh</a>
+<!-- TICKET INFORMATION -->
+<div class="ticket-block" id="tickets">
+  <span class="section-eyebrow">Edinburgh Fringe 2026</span>
+  <h2 class="section-h" style="text-align:center;">Choose a <span class="accent">Performance.</span></h2>
+
+  <div class="ticket-facts">
+    <div class="ticket-fact">
+      <span class="label">Dates</span>
+      <div class="val">Aug 6–30<span class="sub">Selected dates</span></div>
+    </div>
+    <div class="ticket-fact">
+      <span class="label">Show Time</span>
+      <div class="val">21:30<span class="sub">90 minutes</span></div>
+    </div>
+    <div class="ticket-fact">
+      <span class="label">Price</span>
+      <div class="val">£15</div>
+    </div>
+    <div class="ticket-fact">
+      <span class="label">Room</span>
+      <div class="val">Just Up The Road<span class="sub">Just The Tonic at The Caves</span></div>
+    </div>
+    <div class="ticket-fact">
+      <span class="label">Venue</span>
+      <div class="val">Venue 88</div>
+    </div>
+    <div class="ticket-fact">
+      <span class="label">Advisory</span>
+      <div class="val">Ages 16+<span class="sub">Strong language</span></div>
+    </div>
+  </div>
+
+  <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="ticket-cta">Choose a Performance</a>
+  <div class="ticket-advisory">Just The Tonic at The Caves &middot; Edinburgh, Scotland</div>
 </div>
 
 <!-- FOOTER -->
@@ -953,8 +626,17 @@
   var opening = new Date('2026-08-06T00:00:00');
   var now = new Date();
   var diff = Math.ceil((opening - now) / (1000 * 60 * 60 * 24));
-  var el = document.getElementById('countdown-days');
-  if (el) el.textContent = diff > 0 ? diff : 0;
+  var numEl = document.getElementById('countdown-days');
+  var textEl = document.getElementById('countdown-text');
+  if (numEl && textEl) {
+    if (diff > 0) {
+      numEl.textContent = diff;
+      textEl.textContent = 'Days Until Opening Night';
+    } else {
+      numEl.textContent = '';
+      textEl.textContent = 'Now Playing in Edinburgh';
+    }
+  }
 })();
 </script>
 <script src="includes.js"></script>
