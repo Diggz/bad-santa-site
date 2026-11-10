@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 | Mythical Cabaret Rock Opera</title>
-<meta name="description" content="A Mythic Immersive Cabaret Rock Opera. Bad Santa and the Angry Elves present Smells Like Christmas Spirit — the 2026 holiday show. Dates coming soon.">
+<meta name="description" content="A Mythic Immersive Cabaret Rock Opera. Bad Santa and the Angry Elves present Smells Like Christmas Spirit — the 2026 holiday tour, Nov 27 – Dec 23 across Central Florida.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://badsantaandtheangryelves.com/">
 <meta property="og:title" content="Bad Santa and the Angry Elves — Smells Like Christmas Spirit">
-<meta property="og:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — Holiday 2026. Dates coming soon.">
+<meta property="og:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — 2026 holiday tour, Nov 27 – Dec 23.">
 <meta property="og:image" content="https://badsantaandtheangryelves.com/posters/poster-2026.jpg">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
@@ -18,7 +18,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bad Santa and the Angry Elves — Smells Like Christmas Spirit">
-<meta name="twitter:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — Holiday 2026. Dates coming soon.">
+<meta name="twitter:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — 2026 holiday tour, Nov 27 – Dec 23.">
 <meta name="twitter:image" content="https://badsantaandtheangryelves.com/posters/poster-2026.jpg">
 <link rel="icon" type="image/jpeg" href="media/bs-icon.jpg">
 <link rel="apple-touch-icon" href="media/bs-icon.jpg">
@@ -193,6 +193,33 @@
     font-weight: 400;
     opacity: 0.85;
     margin-left: 8px;
+  }
+
+  /* ---------- TOUR ---------- */
+  .tour-list { list-style: none; border-top: 1px solid var(--line-strong); margin-top: 36px; }
+  .tour-row {
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 20px 4px;
+    border-bottom: 1px solid var(--line-strong);
+    transition: background 0.2s;
+  }
+  .tour-row:hover { background: rgba(21, 89, 176, 0.18); }
+  .tour-date { font-family: 'Oswald', sans-serif; text-transform: uppercase; line-height: 1.1; }
+  .tour-dow { display: block; font-size: 14px; letter-spacing: 0.2em; color: var(--gold); font-weight: 600; }
+  .tour-md { display: block; font-family: 'Bungee Inline', sans-serif; font-size: 30px; color: var(--bone); }
+  .tour-venue { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 22px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--bone); }
+  .tour-city { font-family: 'Oswald', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--bone-dim); text-align: right; }
+  .tour-note { margin-top: 28px; color: var(--bone-dim); font-size: 19px; font-style: italic; }
+  .tour-note a { color: var(--gold); }
+  @media (max-width: 680px) {
+    .tour-row { grid-template-columns: 96px 1fr; gap: 4px 16px; }
+    .tour-date { grid-row: span 2; }
+    .tour-md { font-size: 22px; }
+    .tour-venue { font-size: 18px; }
+    .tour-city { text-align: left; font-size: 13px; }
   }
 
   /* ---------- VOICES ---------- */
@@ -460,7 +487,7 @@
 <div id="site-nav"></div>
 
 <!-- HERO -->
-<header class="hero" id="tickets">
+<header class="hero">
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -469,13 +496,63 @@
       <div class="hero-fringe">The 2026 Holiday Show</div>
       <div class="hero-theme">Smells Like Christmas Spirit</div>
       <div class="hero-subtitle">A Mythic Immersive Cabaret Rock Opera</div>
-      <div class="hero-date" style="margin-top:22px;">Dates Coming Soon</div>
-      <div class="hero-info">Follow the band to be first in line for tickets.</div>
-      <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank" class="hero-cta">Follow for Show Dates</a>
+      <a href="#tour" class="hero-date" style="margin-top:22px;">2026 Tour &middot; Nov 27 &ndash; Dec 23</a>
+      <div class="hero-info">8 shows across Central Florida &middot; More dates to be added</div>
+      <a href="#tour" class="hero-cta">See Tour Dates</a>
     </div>
   </div>
 </header>
 
+<!-- TOUR DATES -->
+<section id="tour"><span id="tickets" style="position:absolute;top:0;"></span>
+  <div class="wrap">
+    <span class="section-eyebrow">Smells Like Christmas Spirit &middot; 2026 Tour</span>
+    <h2 class="section-h">Tour <span class="accent">Dates.</span></h2>
+    <ul class="tour-list">
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Fri</span><span class="tour-md">Nov 27</span></div>
+        <div class="tour-venue">BSide at Ten10 Brewing</div>
+        <div class="tour-city">Orlando, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Sat</span><span class="tour-md">Dec 5</span></div>
+        <div class="tour-venue">West End Trading Co.</div>
+        <div class="tour-city">Sanford, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Sun</span><span class="tour-md">Dec 6</span></div>
+        <div class="tour-venue">KrampusFest &middot; The Plaza Live</div>
+        <div class="tour-city">Orlando, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Sat</span><span class="tour-md">Dec 12</span></div>
+        <div class="tour-venue">Jessie&rsquo;s Lounge</div>
+        <div class="tour-city">Winter Haven, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Sun</span><span class="tour-md">Dec 13</span></div>
+        <div class="tour-venue">Maxine&rsquo;s on Shine</div>
+        <div class="tour-city">Orlando, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Wed</span><span class="tour-md">Dec 16</span></div>
+        <div class="tour-venue">Ace Cafe</div>
+        <div class="tour-city">Sanford, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Sun</span><span class="tour-md">Dec 20</span></div>
+        <div class="tour-venue">The Lucky Lure</div>
+        <div class="tour-city">Orlando, FL</div>
+      </li>
+      <li class="tour-row">
+        <div class="tour-date"><span class="tour-dow">Wed</span><span class="tour-md">Dec 23</span></div>
+        <div class="tour-venue">Will&rsquo;s Pub</div>
+        <div class="tour-city">Orlando, FL</div>
+      </li>
+    </ul>
+    <p class="tour-note">Dates subject to change. More shows to be added &mdash; <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank">follow the band</a> for tickets and updates.</p>
+  </div>
+</section>
 <!-- WHAT PEOPLE ARE SAYING -->
 <div class="voices">
   <div class="wrap">
@@ -647,8 +724,8 @@
 
 <!-- FINAL TICKET CTA -->
 <div class="final-cta">
-  <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank" class="ticket-btn">Follow for Show Dates</a>
-  <div class="venue-line">Smells Like Christmas Spirit &middot; Holiday 2026 &middot; Dates Coming Soon</div>
+  <a href="#tour" class="ticket-btn">See Tour Dates</a>
+  <div class="venue-line">Smells Like Christmas Spirit &middot; 2026 Tour &middot; Nov 27 &ndash; Dec 23</div>
 </div>
 
 <!-- FOOTER -->
