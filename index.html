@@ -91,6 +91,29 @@
     border: 1px solid var(--line-strong);
     box-shadow: 0 24px 60px rgba(0,0,0,0.55);
   }
+  .hero-poster-link { display: block; cursor: zoom-in; transition: transform 0.25s; }
+  .hero-poster-link:hover { transform: scale(1.015); }
+  .lightbox {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(5,5,5,0.97);
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+    cursor: zoom-out;
+  }
+  .lightbox.open { opacity: 1; visibility: visible; }
+  .lightbox img {
+    max-width: min(96vw, 1080px); max-height: 92vh;
+    width: auto; height: auto;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  }
+  .lightbox-close {
+    position: absolute; top: 16px; right: 22px;
+    background: none; border: 0; color: var(--bone);
+    font-size: 42px; line-height: 1; cursor: pointer;
+  }
   .hero-text { text-align: left; }
   .hero-theme {
     font-family: 'Bungee Inline', sans-serif;
@@ -496,7 +519,7 @@
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <img src="posters/poster-2026.jpg" alt="Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 poster" class="hero-poster" width="1080" height="1080">
+    <a href="posters/poster-2026.jpg" class="hero-poster-link" aria-label="View poster full size"><img src="posters/poster-2026.jpg" alt="Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 poster" class="hero-poster" width="1080" height="1080"></a>
     <div class="hero-text">
       <div class="hero-subtitle" style="font-size:clamp(18px,1.9vw,24px);letter-spacing:0.12em;margin-bottom:14px;text-wrap:balance;">Bad Santa and the Angry Elves</div>
       <div class="hero-fringe">2026 Tour</div>
@@ -723,6 +746,25 @@
 <!-- FOOTER -->
 <div id="site-footer"></div>
 
+<div class="lightbox" id="poster-lightbox" role="dialog" aria-modal="true" aria-label="Poster full size">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="posters/poster-2026.jpg" alt="Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 poster">
+</div>
+<script>
+(function () {
+  var link = document.querySelector('.hero-poster-link');
+  var box = document.getElementById('poster-lightbox');
+  if (!link || !box) return;
+  function close() { box.classList.remove('open'); document.body.style.overflow = ''; }
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
 <script src="includes.js"></script>
 
 <!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->
