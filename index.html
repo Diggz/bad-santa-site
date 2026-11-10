@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bad Santa and the Angry Elves — Edinburgh Fringe 2026 | Mythical Cabaret Rock Opera</title>
-<meta name="description" content="A Mythic Immersive Cabaret Rock Opera. Bad Santa and the Angry Elves at Edinburgh Fringe 2026. August 6–30, Just The Tonic at The Caves. Tickets £15.">
+<title>Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 | Mythical Cabaret Rock Opera</title>
+<meta name="description" content="A Mythic Immersive Cabaret Rock Opera. Bad Santa and the Angry Elves present Smells Like Christmas Spirit — the 2026 holiday show. Dates coming soon.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://badsantaandtheangryelves.com/">
-<meta property="og:title" content="Bad Santa and the Angry Elves — Edinburgh Fringe 2026">
-<meta property="og:description" content="A Mythic Immersive Cabaret Rock Opera. August 6–30 at Just The Tonic at The Caves. Tickets £15.">
-<meta property="og:image" content="https://badsantaandtheangryelves.com/media/hero-band.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:title" content="Bad Santa and the Angry Elves — Smells Like Christmas Spirit">
+<meta property="og:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — Holiday 2026. Dates coming soon.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/posters/poster-2026.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bad Santa and the Angry Elves — Edinburgh Fringe 2026">
-<meta name="twitter:description" content="A Mythic Immersive Cabaret Rock Opera. August 6–30 at The Caves. Tickets £15.">
-<meta name="twitter:image" content="https://badsantaandtheangryelves.com/media/hero-band.jpg">
+<meta name="twitter:title" content="Bad Santa and the Angry Elves — Smells Like Christmas Spirit">
+<meta name="twitter:description" content="A Mythic Immersive Cabaret Rock Opera. Smells Like Christmas Spirit — Holiday 2026. Dates coming soon.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/posters/poster-2026.jpg">
 <link rel="icon" type="image/jpeg" href="media/bs-icon.jpg">
 <link rel="apple-touch-icon" href="media/bs-icon.jpg">
 <link rel="stylesheet" href="includes.css">
@@ -53,59 +53,53 @@
   a:hover { color: var(--bone); }
   ::selection { background: var(--blood); color: var(--bone); }
 
-  /* ---------- COUNTDOWN ---------- */
-  .countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 32px;
-    background: var(--blood-dark);
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .countdown:hover { background: var(--blood); }
-  .countdown a {
-    color: var(--bone);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .countdown-number,
-  .countdown-label {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--bone);
-  }
-
   /* ---------- HERO ---------- */
   .hero {
     position: relative;
     min-height: 92vh;
     display: flex; flex-direction: column; justify-content: center;
     align-items: center;
-    padding: 0 40px 60px;
+    padding: 60px 40px;
     border-bottom: 1px solid var(--line-strong);
     overflow: hidden;
     text-align: center;
   }
   .hero-img {
     position: absolute; inset: 0;
-    background: url('media/hero-band.jpg') top center/cover no-repeat;
-    background-color: #1a1a1a;
+    background: radial-gradient(ellipse at 30% 40%, #1559b0 0%, #0b3a7a 45%, #061a38 80%, var(--black) 100%);
   }
   .hero-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.45) 40%, rgba(10,10,10,0.92) 100%);
+    background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0) 70%, rgba(10,10,10,0.85) 100%);
   }
   .hero-content {
     position: relative;
-    max-width: 900px;
+    max-width: 1180px;
+    width: 100%;
     z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+  }
+  .hero-text { text-align: left; }
+  .hero-theme {
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: clamp(30px, 4.6vw, 56px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--bone);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    margin-bottom: 18px;
   }
   .hero-title {
     font-family: 'Bungee Inline', sans-serif;
@@ -143,7 +137,7 @@
     letter-spacing: 0.2em;
     color: var(--gold);
     text-shadow: 0 2px 12px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8);
-    margin-bottom: 28px;
+    margin-bottom: 10px;
   }
   .hero-date {
     display: block;
@@ -450,7 +444,10 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 880px) {
-    .hero { padding: 0 24px 40px; }
+    .hero { padding: 40px 24px; min-height: auto; }
+    .hero-content { grid-template-columns: 1fr; gap: 32px; }
+    .hero-text { text-align: center; }
+    .hero-poster { max-width: 520px; margin: 0 auto; }
     section { padding: 70px 24px; }
     .poster-grid { grid-template-columns: repeat(2, 1fr); }
     .voices { padding: 60px 24px; }
@@ -462,27 +459,20 @@
 
 <div id="site-nav"></div>
 
-<!-- COUNTDOWN -->
-<div class="countdown">
-  <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank">
-    <span class="countdown-number" id="countdown-days"></span>
-    <span class="countdown-label" id="countdown-text">Days Until Opening Night</span>
-  </a>
-</div>
-
 <!-- HERO -->
 <header class="hero" id="tickets">
   <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-title">Bad Santa</div>
-    <div class="hero-title-sub">And The Angry Elves</div>
-    <div class="hero-subtitle">A Mythic Immersive Cabaret Rock Opera</div>
-    <div class="hero-fringe">Edinburgh Fringe 2026</div>
-    <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-date">August 6–30 &middot; 21:30</a>
-    <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-venue">Just The Tonic at The Caves &middot; Venue 88</a>
-    <div class="hero-info">90 min &middot; £15 &middot; Ages 16+ &middot; Strong language</div>
-    <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="hero-cta">Get Tickets<span class="price">&middot; £15</span></a>
+    <img src="posters/poster-2026.jpg" alt="Bad Santa and the Angry Elves — Smells Like Christmas Spirit 2026 poster" class="hero-poster" width="1080" height="1080">
+    <div class="hero-text">
+      <div class="hero-fringe">The 2026 Holiday Show</div>
+      <div class="hero-theme">Smells Like Christmas Spirit</div>
+      <div class="hero-subtitle">A Mythic Immersive Cabaret Rock Opera</div>
+      <div class="hero-date" style="margin-top:22px;">Dates Coming Soon</div>
+      <div class="hero-info">Follow the band to be first in line for tickets.</div>
+      <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank" class="hero-cta">Follow for Show Dates</a>
+    </div>
   </div>
 </header>
 
@@ -540,7 +530,7 @@
       <p>Kris Kringle IV asked his father one question: <strong>why does Christmas only happen once a year?</strong></p>
       <p>For that, he was cast out. Exiled from the North Pole with nothing but the fastest sleigh, his Elves, and a mother's handmade music box.</p>
       <p>He landed in Orlando and spent a decade building a mythology in exile — a rock-and-roll Christmas rebellion that proved him right. From Frosty to Bowie, Dickens to Queen, the band built the ultimate sonic sleigh ride.</p>
-      <p><strong>Now they're bringing the rebellion to Edinburgh.</strong></p>
+      <p>After taking the rebellion all the way to the Edinburgh Fringe, the Elves are home for the holidays with <strong>Smells Like Christmas Spirit.</strong></p>
     </div>
   </div>
 </section>
@@ -551,7 +541,7 @@
     <span class="section-eyebrow">The Roster</span>
     <h2 class="section-h">Meet The <span class="accent">Elves.</span></h2>
     <p style="max-width: 680px; color: var(--bone-dim); font-size: 21px;">
-      Centuries old. Stripped of various honors. The actual people who taught your favorite rock stars how to do what they do. Now flying to Scotland.
+      Centuries old. Stripped of various honors. The actual people who taught your favorite rock stars how to do what they do. Back from Scotland and louder than ever.
     </p>
 
     <div class="elves-grid">
@@ -583,7 +573,7 @@
         <div class="elf-portrait" data-elf="yeti-lee"></div>
         <div class="elf-name">Yeti Lee</div>
         <div class="elf-role">Bass · The Experiment</div>
-        <div class="elf-bio">They said it couldn't be done. Elfie Nicks combined the DNA of an elf, a yeti, and Geddy Lee from Rush in his unsanctioned North Pole lab. The result: the most ferocious bass player the workshop has ever produced. Edinburgh will be his first deployment.</div>
+        <div class="elf-bio">They said it couldn't be done. Elfie Nicks combined the DNA of an elf, a yeti, and Geddy Lee from Rush in his unsanctioned North Pole lab. The result: the most ferocious bass player the workshop has ever produced. Edinburgh was his first deployment.</div>
       </div>
       <div class="elf">
         <div class="elf-portrait" data-elf="orson-elf"></div>
@@ -657,31 +647,13 @@
 
 <!-- FINAL TICKET CTA -->
 <div class="final-cta">
-  <a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank" class="ticket-btn">Get Tickets &middot; £15</a>
-  <div class="venue-line">Just The Tonic at The Caves &middot; Venue 88 &middot; Edinburgh</div>
+  <a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank" class="ticket-btn">Follow for Show Dates</a>
+  <div class="venue-line">Smells Like Christmas Spirit &middot; Holiday 2026 &middot; Dates Coming Soon</div>
 </div>
 
 <!-- FOOTER -->
 <div id="site-footer"></div>
 
-<script>
-(function() {
-  var opening = new Date('2026-08-06T00:00:00');
-  var now = new Date();
-  var diff = Math.ceil((opening - now) / (1000 * 60 * 60 * 24));
-  var numEl = document.getElementById('countdown-days');
-  var textEl = document.getElementById('countdown-text');
-  if (numEl && textEl) {
-    if (diff > 0) {
-      numEl.textContent = diff;
-      textEl.textContent = 'Days Until Opening Night';
-    } else {
-      numEl.textContent = '';
-      textEl.textContent = 'Now Playing in Edinburgh';
-    }
-  }
-})();
-</script>
 <script src="includes.js"></script>
 
 <!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->

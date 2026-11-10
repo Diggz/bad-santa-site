@@ -16,13 +16,13 @@
     return path === page ? ' class="active"' : '';
   }
 
-  var ticketUrl = 'https://edinburgh.justthetonic.com/event/88:5735/';
+  var ticketUrl = 'https://www.instagram.com/badsantaandtheangryelves/';
 
   /* --- Nav items --- */
   var navItems = [
     { label: 'Lore', url: '#lore', anchor: true },
     { label: 'The Elves', url: '#elves', anchor: true },
-    { label: 'Tickets', url: '#tickets', anchor: true }
+    { label: 'Shows', url: '#tickets', anchor: true }
   ];
 
   /* --- Build desktop nav links --- */
@@ -32,7 +32,7 @@
     desktopLinks += '<a href="' + url + '"' + (item.anchor ? '' : active(item.url)) + '>' + item.label + '</a>';
   });
   /* GET TICKETS button (replaces old Support CTA) */
-  desktopLinks += '<a href="' + ticketUrl + '" target="_blank" class="topbar-cta" style="text-decoration:none;background:var(--blood);color:var(--bone);padding:8px 18px;border-radius:4px;font-weight:700;">Get Tickets</a>';
+  desktopLinks += '<a href="' + ticketUrl + '" target="_blank" class="topbar-cta" style="text-decoration:none;background:var(--blood);color:var(--bone);padding:8px 18px;border-radius:4px;font-weight:700;">Get Show Dates</a>';
   /* Share button (desktop) */
   desktopLinks += '<button class="share-btn" onclick="sharesite(this)" aria-label="Share">'
     + '<svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>'
@@ -47,7 +47,7 @@
     var onclick = (item.anchor && isHome) ? ' onclick="' + closeMenu + '"' : '';
     mobileLinks += '<a href="' + url + '"' + onclick + '>' + item.label + '</a>';
   });
-  mobileLinks += '<a href="' + ticketUrl + '" target="_blank" class="topbar-cta" style="background:var(--blood);color:var(--bone);padding:12px 20px;border-radius:4px;font-weight:700;text-align:center;">Get Tickets — £15</a>';
+  mobileLinks += '<a href="' + ticketUrl + '" target="_blank" class="topbar-cta" style="background:var(--blood);color:var(--bone);padding:12px 20px;border-radius:4px;font-weight:700;text-align:center;">Follow for 2026 Show Dates</a>';
   /* Share button (mobile) */
   mobileLinks += '<button class="mobile-share-btn" onclick="sharesite(this)">'
     + '<svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>'
@@ -65,7 +65,7 @@
 
   /* --- Sticky mobile ticket bar --- */
   var stickyBar = '<div class="sticky-ticket-bar">'
-    + '<a href="' + ticketUrl + '" target="_blank">Get Tickets — £15</a>'
+    + '<a href="' + ticketUrl + '" target="_blank">Follow for 2026 Show Dates</a>'
     + '</div>';
 
   /* --- Footer HTML --- */
@@ -75,11 +75,10 @@
     + '<a href="https://www.facebook.com/BadSantaandTheAngryElves" target="_blank">Facebook</a>'
     + '<a href="https://www.instagram.com/badsantaandtheangryelves/" target="_blank">Instagram</a>'
     + '<a href="https://x.com/BSantaAElves" target="_blank">Twitter</a>'
-    + '<a href="https://edinburgh.justthetonic.com/event/88:5735/" target="_blank">Edinburgh Tickets</a>'
     + '<a href="epk.html">Listen</a>'
     + '<a href="buzz.html">Buzz</a>'
     + '</div>'
-    + '<div class="copyright">Bad Santa and the Angry Elves &middot; Orlando, FL &middot; est. 2016 &middot; Edinburgh Fringe 2026</div>'
+    + '<div class="copyright">Bad Santa and the Angry Elves &middot; Orlando, FL &middot; est. 2016 &middot; Smells Like Christmas Spirit 2026</div>'
     + '</footer>';
 
   /* --- Inject --- */
@@ -97,7 +96,7 @@
   window.sharesite = function (btn) {
     var data = {
       title: 'Bad Santa and the Angry Elves',
-      text: 'Mythical Cabaret Rock Opera — Edinburgh Fringe 2026',
+      text: 'Mythical Cabaret Rock Opera — Smells Like Christmas Spirit 2026',
       url: 'https://badsantaandtheangryelves.com'
     };
     if (navigator.share) {
