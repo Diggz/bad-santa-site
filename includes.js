@@ -56,7 +56,7 @@
   /* --- Topbar HTML --- */
   var brandUrl = isHome ? '#' : 'index.html';
   var topbar = '<div class="topbar">'
-    + '<a href="' + brandUrl + '" class="topbar-brand" style="text-decoration:none;">Bad Santa<span class="bolt">⚡</span>The Angry Elves</a>'
+    + '<a href="' + brandUrl + '" class="topbar-brand" style="text-decoration:none;">Bad Santa And The Angry Elves</a>'
     + '<div class="topbar-links">' + desktopLinks + '</div>'
     + '<button class="hamburger" onclick="document.querySelector(\'.mobile-menu\').classList.toggle(\'open\');this.classList.toggle(\'open\');" aria-label="Menu">'
     + '<span></span><span></span><span></span></button>'
