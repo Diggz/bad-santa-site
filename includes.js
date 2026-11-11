@@ -21,8 +21,7 @@
   /* --- Nav items --- */
   var navItems = [
     { label: 'Lore', url: '#lore', anchor: true },
-    { label: 'The Elves', url: '#elves', anchor: true },
-    { label: 'Tour', url: '#tour', anchor: true }
+    { label: 'The Elves', url: '#elves', anchor: true }
   ];
 
   /* --- Build desktop nav links --- */
@@ -32,7 +31,7 @@
     desktopLinks += '<a href="' + url + '"' + (item.anchor ? '' : active(item.url)) + '>' + item.label + '</a>';
   });
   /* GET TICKETS button (replaces old Support CTA) */
-  desktopLinks += '<a href="' + ticketUrl + '" class="topbar-cta" style="text-decoration:none;background:var(--blood);color:var(--bone);padding:8px 18px;border-radius:4px;font-weight:700;">Tour Dates</a>';
+  desktopLinks += '<a href="' + ticketUrl + '" class="topbar-cta" style="text-decoration:none;background:var(--blood);color:var(--bone);padding:8px 18px;border-radius:4px;font-weight:700;">2026 Tour Dates</a>';
   /* Share button (desktop) */
   desktopLinks += '<button class="share-btn" onclick="sharesite(this)" aria-label="Share">'
     + '<svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>'
