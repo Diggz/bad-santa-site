@@ -21,14 +21,16 @@
   /* --- Nav items --- */
   var navItems = [
     { label: 'Lore', url: '#lore', anchor: true },
-    { label: 'The Elves', url: '#elves', anchor: true }
+    { label: 'The Elves', url: '#elves', anchor: true },
+    { label: 'BSAE Merch', url: 'https://diggzstore.com/collections/bad-santa', external: true }
   ];
 
   /* --- Build desktop nav links --- */
   var desktopLinks = '';
   navItems.forEach(function (item) {
     var url = item.anchor ? href(item.url) : item.url;
-    desktopLinks += '<a href="' + url + '"' + (item.anchor ? '' : active(item.url)) + '>' + item.label + '</a>';
+    var ext = item.external ? ' target="_blank" rel="noopener"' : '';
+    desktopLinks += '<a href="' + url + '"' + ext + (item.anchor ? '' : active(item.url)) + '>' + item.label + '</a>';
   });
   /* GET TICKETS button (replaces old Support CTA) */
   desktopLinks += '<a href="' + ticketUrl + '" class="topbar-cta" style="text-decoration:none;background:var(--blood);color:var(--bone);padding:8px 18px;border-radius:4px;font-weight:700;">2026 Tour Dates</a>';
@@ -44,7 +46,8 @@
   navItems.forEach(function (item) {
     var url = item.anchor ? href(item.url) : item.url;
     var onclick = (item.anchor && isHome) ? ' onclick="' + closeMenu + '"' : '';
-    mobileLinks += '<a href="' + url + '"' + onclick + '>' + item.label + '</a>';
+    var ext = item.external ? ' target="_blank" rel="noopener"' : '';
+    mobileLinks += '<a href="' + url + '"' + ext + onclick + '>' + item.label + '</a>';
   });
   mobileLinks += '<a href="' + ticketUrl + '" onclick="' + closeMenu + '" class="topbar-cta" style="background:var(--blood);color:var(--bone);padding:12px 20px;border-radius:4px;font-weight:700;text-align:center;">2026 Tour Dates</a>';
   /* Share button (mobile) */
