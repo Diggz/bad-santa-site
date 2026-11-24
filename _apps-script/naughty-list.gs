@@ -33,7 +33,8 @@ var SMS_CONSENT_TEXT =
 
 // Column order must match row 1 of the sheet.
 // Timestamp | First Name | Last Name | Email | Phone | SMS Opt-In | Marketing Opt-In |
-// SMS Consent Language Shown | Source Page | Referrer | User Agent
+// SMS Consent Language Shown | Source Page | Referrer | User Agent |
+// RSVP: BSide @ Ten10 Brewing 11/27/2026 | Guests (incl. self)
 
 function doPost(e) {
   try {
@@ -67,6 +68,13 @@ function doPost(e) {
     var phoneDigits = phoneRaw.replace(/\D/g, '');
     var sms = p.smsOptIn === 'yes';
     var marketing = p.marketing === 'yes' ? 'yes' : (p.marketing === 'no' ? 'no' : '');
+    // Show RSVP. Blank if the page didn't send it (older cached page).
+    var rsvp = p.rsvp === 'yes' ? 'Yes' : (p.rsvp === 'no' ? 'No' : '');
+    var guests = '';
+    if (rsvp === 'Yes') {
+      guests = Math.floor(Number(p.guests));
+      if (!(guests >= 1 && guests <= 4)) return json_({ ok: false, error: 'Please pick 1 to 4 guests, including yourself.' });
+    }
 
     if (!first || !last) return json_({ ok: false, error: 'Please enter your first and last name.' });
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return json_({ ok: false, error: 'Please enter a valid email address.' });
@@ -91,7 +99,9 @@ function doPost(e) {
       sms ? SMS_CONSENT_TEXT : '',
       clean_(p.page, 300),
       clean_(p.referrer, 300),
-      clean_(p.ua, 300)
+      clean_(p.ua, 300),
+      rsvp,
+      guests
     ];
 
     var lock = LockService.getScriptLock();

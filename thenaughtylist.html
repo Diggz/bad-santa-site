@@ -208,6 +208,37 @@
   fieldset.invalid .choice { border-color: var(--blood); }
   fieldset.invalid .err { display: block; }
 
+  /* Show RSVP block */
+  .show-rsvp {
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    background: rgba(212, 168, 74, 0.07);
+    padding: 18px 18px 16px;
+    margin-bottom: 28px;
+  }
+  .show-rsvp .choice { background: transparent; border: none; padding: 0; }
+  .show-rsvp .choice-title { font-size: 16px; }
+  .guests {
+    margin: 14px 0 0 34px;
+    transition: opacity 0.2s;
+  }
+  .guests.disabled { opacity: 0.35; }
+  .guests.disabled select { cursor: not-allowed; }
+  .guests select {
+    width: 100%;
+    max-width: 260px;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    color: var(--bone);
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    padding: 11px 12px;
+    cursor: pointer;
+  }
+  .guests select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 168, 74, 0.18); }
+  @media (max-width: 640px) { .guests { margin-left: 0; } .guests select { max-width: none; } }
+
   /* Honeypot — hidden from humans, irresistible to bots */
   .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
 
@@ -311,6 +342,25 @@
     <form id="naughty-form" novalidate>
       <p class="card-intro">Fill in the form and the Elves will make sure you hear about every show first. Being bad has never been this easy.</p>
 
+      <!-- SHOW RSVP -->
+      <fieldset class="show-rsvp" id="rsvp-set">
+        <label class="choice" for="rsvp">
+          <input type="checkbox" id="rsvp" name="rsvp" value="yes" checked>
+          <span>
+            <span class="choice-title">RSVP to BSide at Ten10 Brewing 11/27/2026</span>
+          </span>
+        </label>
+        <div class="guests" id="guests-wrap">
+          <label class="lbl" for="guests">Number of guests (including yourself)</label>
+          <select id="guests" name="guests">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </fieldset>
+
       <div class="row">
         <div class="field" data-field="firstName">
           <label class="lbl" for="firstName">First Name <span class="req">*</span></label>
@@ -386,7 +436,7 @@
     <!-- THANK YOU -->
     <div class="thanks" id="thanks" aria-live="polite">
       <h2>You're <em>Officially Naughty.</em></h2>
-      <p>Thanks, <span id="thanks-name">friend</span>! You're on the RSVP list. Santa's watching, and the Elves will be in touch about upcoming shows.</p>
+      <p>Thanks, <span id="thanks-name">friend</span>! You're on the RSVP list. Santa's watching, and the Elves will be in touch about upcoming shows.<span id="thanks-rsvp"></span></p>
       <a href="index.html" class="home-btn">Back to the North Pole</a>
       <div class="countdown">Heading home in <span id="countdown">6</span>…</div>
     </div>
@@ -450,6 +500,17 @@
       : '(required for text alerts)';
   });
 
+  /* Grey out guest count when RSVP is unchecked */
+  var rsvpBox = document.getElementById('rsvp');
+  var guestsSel = document.getElementById('guests');
+  var guestsWrap = document.getElementById('guests-wrap');
+  function syncGuests() {
+    guestsSel.disabled = !rsvpBox.checked;
+    guestsWrap.classList.toggle('disabled', !rsvpBox.checked);
+  }
+  rsvpBox.addEventListener('change', syncGuests);
+  syncGuests();
+
   /* Clear errors as people fix them */
   form.addEventListener('input', function (e) {
     var f = e.target.closest('[data-field]');
@@ -489,6 +550,11 @@
   function showThanks(firstName) {
     form.style.display = 'none';
     document.getElementById('thanks-name').textContent = firstName || 'friend';
+    if (rsvpBox.checked) {
+      var n = Number(guestsSel.value);
+      document.getElementById('thanks-rsvp').textContent =
+        ' See you at BSide at Ten10 Brewing on 11/27, party of ' + n + '!';
+    }
     document.getElementById('thanks').classList.add('show');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     var left = REDIRECT_SECONDS;
@@ -518,6 +584,8 @@
     data.append('phone', val('phone'));
     data.append('smsOptIn', sms.checked ? 'yes' : 'no');
     data.append('marketing', form.querySelector('input[name="marketing"]:checked').value);
+    data.append('rsvp', rsvpBox.checked ? 'yes' : 'no');
+    data.append('guests', rsvpBox.checked ? guestsSel.value : '');
     data.append('website', document.getElementById('website').value); /* honeypot */
     data.append('elapsed', String(elapsed));
     data.append('human', interacted ? '1' : '0');
