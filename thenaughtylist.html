@@ -223,6 +223,13 @@
     transition: opacity 0.2s;
   }
   .guests.disabled { opacity: 0.35; }
+  .guests-note {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.45;
+    font-style: italic;
+    color: var(--bone-dim);
+  }
   .guests.disabled select { cursor: not-allowed; }
   .guests select {
     width: 100%;
@@ -358,6 +365,7 @@
             <option value="3">3</option>
             <option value="4">4</option>
           </select>
+          <p class="guests-note">Max 4 people per RSVP. Please create another RSVP if you have more than 4 people in your party.</p>
         </div>
       </fieldset>
 
