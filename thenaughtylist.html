@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Naughty List — Bad Santa and the Angry Elves | RSVP for Upcoming Shows</title>
+<meta name="description" content="Hey Santa, add me to the Naughty List! Get on the RSVP list for upcoming Bad Santa and the Angry Elves shows.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://badsantaandtheangryelves.com/thenaughtylist">
+<meta property="og:title" content="The Naughty List — Bad Santa and the Angry Elves">
+<meta property="og:description" content="Get on the RSVP list for upcoming shows.">
+<meta property="og:image" content="https://badsantaandtheangryelves.com/media/hero-band.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Naughty List — Bad Santa and the Angry Elves">
+<meta name="twitter:description" content="Get on the RSVP list for upcoming shows.">
+<meta name="twitter:image" content="https://badsantaandtheangryelves.com/media/hero-band.jpg">
+
+<link rel="icon" type="image/jpeg" href="media/bs-icon.jpg">
+<link rel="apple-touch-icon" href="media/bs-icon.jpg">
+<link rel="stylesheet" href="includes.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --bone: #ece4d6;
+    --bone-dim: #ccc5b8;
+    --blood: #c8242c;
+    --blood-dark: #8a161c;
+    --holly: #1f5f3a;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+    --line-strong: rgba(236, 228, 214, 0.28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--blood); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--bone); }
+  ::selection { background: var(--blood); color: var(--bone); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: 110px 40px 60px;
+    text-align: center;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('media/hero-band.jpg') top center/cover no-repeat;
+    background-color: #1a1a1a;
+    opacity: 0.25;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0; height: 120px;
+    background: linear-gradient(to bottom, rgba(10,10,10,0), var(--black));
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    color: var(--blood);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(34px, 6vw, 62px);
+    line-height: 1.1;
+    color: var(--bone);
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--blood); }
+  .hero p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: var(--gold);
+  }
+
+  /* ---------- FORM CARD ---------- */
+  .list-wrap {
+    position: relative;
+    z-index: 3;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 90px;
+  }
+  .card {
+    background: rgba(236, 228, 214, 0.04);
+    border: 1px solid var(--line-strong);
+    border-top: 4px solid var(--blood);
+    border-radius: 8px;
+    padding: 40px 40px 36px;
+  }
+  .card-intro {
+    font-size: 19px;
+    color: var(--bone-dim);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .field { margin-bottom: 20px; }
+  label.lbl, .legend {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    color: var(--bone);
+    margin-bottom: 8px;
+  }
+  .req { color: var(--blood); }
+  .opt { color: var(--bone-dim); font-weight: 400; letter-spacing: 0.08em; text-transform: none; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 15px; }
+  input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    color: var(--bone);
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.03em;
+    padding: 13px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  input::placeholder { color: rgba(236, 228, 214, 0.35); }
+  input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 168, 74, 0.18);
+  }
+  .field.invalid input { border-color: var(--blood); }
+  .err {
+    display: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: #ff6b70;
+    margin-top: 6px;
+  }
+  .field.invalid .err { display: block; }
+
+  /* Checkbox / radio blocks */
+  fieldset { border: none; margin: 0 0 22px; padding: 0; }
+  .choice {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(10, 10, 10, 0.45);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px 18px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .choice + .choice { margin-top: 10px; }
+  .choice:hover { border-color: var(--line-strong); }
+  .choice:has(input:checked) { border-color: var(--gold); }
+  .choice input {
+    flex: 0 0 auto;
+    width: 20px; height: 20px;
+    margin-top: 3px;
+    accent-color: var(--blood);
+    cursor: pointer;
+  }
+  .choice-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bone);
+    line-height: 1.3;
+    display: block;
+  }
+  .choice-fine {
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--bone-dim);
+    margin-top: 6px;
+  }
+  fieldset.invalid .choice { border-color: var(--blood); }
+  fieldset.invalid .err { display: block; }
+
+  /* Honeypot — hidden from humans, irresistible to bots */
+  .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+
+  .turnstile-slot { margin: 6px 0 22px; min-height: 0; }
+
+  .submit {
+    width: 100%;
+    background: var(--blood);
+    color: var(--bone);
+    border: 1px solid var(--blood);
+    border-radius: 4px;
+    padding: 17px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+  }
+  .submit:hover { background: transparent; color: var(--blood); }
+  .submit:disabled { opacity: 0.6; cursor: wait; }
+  .form-msg {
+    display: none;
+    margin-top: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: #ff6b70;
+    text-align: center;
+  }
+  .form-msg.show { display: block; }
+  .privacy-note {
+    margin-top: 22px;
+    font-size: 15px;
+    color: var(--bone-dim);
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* ---------- THANK YOU ---------- */
+  .thanks { display: none; text-align: center; padding: 20px 0 8px; }
+  .thanks.show { display: block; }
+  .thanks h2 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-size: clamp(30px, 5vw, 44px);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .thanks h2 em { font-style: normal; color: var(--blood); }
+  .thanks p { color: var(--bone-dim); font-size: 20px; margin-bottom: 26px; }
+  .thanks .home-btn {
+    display: inline-block;
+    background: var(--blood);
+    color: var(--bone);
+    border: 1px solid var(--blood);
+    border-radius: 4px;
+    padding: 14px 28px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .thanks .home-btn:hover { background: transparent; color: var(--blood); }
+  .thanks .countdown {
+    margin-top: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 640px) {
+    .hero { padding: 80px 22px 44px; }
+    .card { padding: 30px 22px 28px; }
+    .row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-label">The Naughty List</div>
+    <h1>Hey Santa, Add Me to the <em>Naughty List!</em></h1>
+    <p>Get on the RSVP List for upcoming shows!</p>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="list-wrap">
+  <div class="card">
+
+    <form id="naughty-form" novalidate>
+      <p class="card-intro">Fill in the form and the Elves will make sure you hear about every show first. Being bad has never been this easy.</p>
+
+      <div class="row">
+        <div class="field" data-field="firstName">
+          <label class="lbl" for="firstName">First Name <span class="req">*</span></label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" maxlength="60" required>
+          <div class="err">Santa needs your first name.</div>
+        </div>
+        <div class="field" data-field="lastName">
+          <label class="lbl" for="lastName">Last Name <span class="req">*</span></label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" maxlength="60" required>
+          <div class="err">And your last name.</div>
+        </div>
+      </div>
+
+      <div class="field" data-field="email">
+        <label class="lbl" for="email">Email Address <span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" maxlength="120" placeholder="you@example.com" required>
+        <div class="err">Enter a valid email address.</div>
+      </div>
+
+      <div class="field" data-field="phone">
+        <label class="lbl" for="phone">Phone Number <span class="opt" id="phone-hint">(required for text alerts)</span></label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="20" placeholder="(407) 555-0123">
+        <div class="err">Enter a valid phone number, including area code.</div>
+      </div>
+
+      <!-- SMS OPT-IN (optional, unchecked by default) -->
+      <fieldset id="sms-set">
+        <span class="legend">Text Alerts <span class="opt">(optional)</span></span>
+        <label class="choice" for="smsOptIn">
+          <input type="checkbox" id="smsOptIn" name="smsOptIn" value="yes">
+          <span>
+            <span class="choice-title">Yes, text me show alerts</span>
+            <span class="choice-fine" id="sms-consent-text">By checking this box, I agree to receive recurring automated text messages from Bad Santa and the Angry Elves at the phone number provided, including show announcements, RSVP reminders and updates. Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time or HELP for help. We never sell or share your phone number.</span>
+          </span>
+        </label>
+      </fieldset>
+
+      <!-- MARKETING OPT-IN / OPT-OUT -->
+      <fieldset id="mkt-set">
+        <span class="legend">Email Updates <span class="req">*</span></span>
+        <label class="choice" for="mktYes">
+          <input type="radio" id="mktYes" name="marketing" value="yes">
+          <span>
+            <span class="choice-title">Yes, keep me in the loop</span>
+            <span class="choice-fine">Send me news about shows, new music, merch and other naughty business.</span>
+          </span>
+        </label>
+        <label class="choice" for="mktNo">
+          <input type="radio" id="mktNo" name="marketing" value="no">
+          <span>
+            <span class="choice-title">No thanks, RSVP list only</span>
+            <span class="choice-fine">Just hold my spot for upcoming shows. No marketing emails.</span>
+          </span>
+        </label>
+        <div class="err">Pick one so the Elves know how naughty to be.</div>
+      </fieldset>
+
+      <!-- Bot trap: humans never see this field -->
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Optional Cloudflare Turnstile widget renders here if a site key is set -->
+      <div class="turnstile-slot" id="turnstile-slot"></div>
+
+      <button type="submit" class="submit" id="submit-btn">Put Me on the Naughty List</button>
+      <div class="form-msg" id="form-msg" role="alert"></div>
+
+      <p class="privacy-note">Your info stays with the band. You can unsubscribe any time.</p>
+    </form>
+
+    <!-- THANK YOU -->
+    <div class="thanks" id="thanks" aria-live="polite">
+      <h2>You're <em>Officially Naughty.</em></h2>
+      <p>Thanks, <span id="thanks-name">friend</span>! You're on the RSVP list. Santa's watching, and the Elves will be in touch about upcoming shows.</p>
+      <a href="index.html" class="home-btn">Back to the North Pole</a>
+      <div class="countdown">Heading home in <span id="countdown">6</span>…</div>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="includes.js"></script>
+<script>
+(function () {
+  /* ==============================================
+     CONFIG
+     ENDPOINT: paste the Google Apps Script Web App URL
+               (ends in /exec) after you deploy it.
+     TURNSTILE_SITE_KEY: optional Cloudflare Turnstile
+               site key for an extra bot check. Leave
+               blank to use the built-in checks only.
+     ============================================== */
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyGKtzYbz_8sSbxTsoNddHdBARxmZ8C-oSIHX1LD_QFa27z4ljGOjBQbMZg8wCJR56cBg/exec';
+  var TURNSTILE_SITE_KEY = '';
+  var REDIRECT_SECONDS = 6;
+
+  var form = document.getElementById('naughty-form');
+  var btn = document.getElementById('submit-btn');
+  var msg = document.getElementById('form-msg');
+  var loadedAt = Date.now();
+  var interacted = false;
+
+  ['keydown', 'pointerdown', 'touchstart'].forEach(function (ev) {
+    document.addEventListener(ev, function () { interacted = true; }, { once: true, passive: true });
+  });
+
+  /* --- Optional Turnstile --- */
+  if (TURNSTILE_SITE_KEY) {
+    var s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    s.async = true; s.defer = true;
+    document.head.appendChild(s);
+    var slot = document.getElementById('turnstile-slot');
+    slot.innerHTML = '<div class="cf-turnstile" data-sitekey="' + TURNSTILE_SITE_KEY + '" data-theme="dark"></div>';
+  }
+
+  /* --- Helpers --- */
+  function val(id) { return (document.getElementById(id).value || '').trim(); }
+  function setInvalid(name, bad) {
+    var el = document.querySelector('[data-field="' + name + '"]');
+    if (el) el.classList.toggle('invalid', bad);
+  }
+  function digits(s) { return s.replace(/\D/g, ''); }
+  function showError(text) { msg.textContent = text; msg.classList.add('show'); }
+
+  /* Phone hint follows the SMS box */
+  var sms = document.getElementById('smsOptIn');
+  var phoneInput = document.getElementById('phone');
+  sms.addEventListener('change', function () {
+    phoneInput.required = sms.checked;
+    document.getElementById('phone-hint').innerHTML = sms.checked
+      ? '<span class="req">*</span> <span class="opt">(required for text alerts)</span>'
+      : '(required for text alerts)';
+  });
+
+  /* Clear errors as people fix them */
+  form.addEventListener('input', function (e) {
+    var f = e.target.closest('[data-field]');
+    if (f) f.classList.remove('invalid');
+    if (e.target.name === 'marketing') document.getElementById('mkt-set').classList.remove('invalid');
+    msg.classList.remove('show');
+  });
+  form.addEventListener('change', function (e) {
+    if (e.target.name === 'marketing') document.getElementById('mkt-set').classList.remove('invalid');
+  });
+
+  function validate() {
+    var ok = true;
+    var first = val('firstName'), last = val('lastName'), email = val('email'), phone = val('phone');
+    var phoneDigits = digits(phone);
+
+    setInvalid('firstName', !first); if (!first) ok = false;
+    setInvalid('lastName', !last); if (!last) ok = false;
+
+    var emailBad = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    setInvalid('email', emailBad); if (emailBad) ok = false;
+
+    var phoneBad = (sms.checked && phoneDigits.length < 10) || (phone && (phoneDigits.length < 10 || phoneDigits.length > 15));
+    setInvalid('phone', phoneBad); if (phoneBad) ok = false;
+
+    var mkt = form.querySelector('input[name="marketing"]:checked');
+    document.getElementById('mkt-set').classList.toggle('invalid', !mkt);
+    if (!mkt) ok = false;
+
+    if (!ok) {
+      var firstBad = form.querySelector('.invalid');
+      if (firstBad) firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    return ok;
+  }
+
+  function showThanks(firstName) {
+    form.style.display = 'none';
+    document.getElementById('thanks-name').textContent = firstName || 'friend';
+    document.getElementById('thanks').classList.add('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var left = REDIRECT_SECONDS;
+    var cd = document.getElementById('countdown');
+    var t = setInterval(function () {
+      left -= 1;
+      cd.textContent = left;
+      if (left <= 0) { clearInterval(t); window.location.href = 'index.html'; }
+    }, 1000);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    msg.classList.remove('show');
+    if (!validate()) return;
+
+    if (!ENDPOINT || ENDPOINT.indexOf('PASTE_') === 0) {
+      showError('The Naughty List isn’t connected yet. Please try again soon.');
+      return;
+    }
+
+    var elapsed = Date.now() - loadedAt;
+    var data = new URLSearchParams();
+    data.append('firstName', val('firstName'));
+    data.append('lastName', val('lastName'));
+    data.append('email', val('email'));
+    data.append('phone', val('phone'));
+    data.append('smsOptIn', sms.checked ? 'yes' : 'no');
+    data.append('marketing', form.querySelector('input[name="marketing"]:checked').value);
+    data.append('website', document.getElementById('website').value); /* honeypot */
+    data.append('elapsed', String(elapsed));
+    data.append('human', interacted ? '1' : '0');
+    data.append('js', 'kringle');
+    data.append('page', window.location.href);
+    data.append('referrer', document.referrer || '');
+    data.append('ua', navigator.userAgent || '');
+    if (TURNSTILE_SITE_KEY) {
+      var tok = form.querySelector('input[name="cf-turnstile-response"]');
+      if (!tok || !tok.value) { showError('Please finish the quick "are you human?" check above.'); return; }
+      data.append('turnstileToken', tok.value);
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Checking it twice…';
+
+    fetch(ENDPOINT, { method: 'POST', body: data })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (res && res.ok) {
+          showThanks(val('firstName'));
+        } else {
+          throw new Error((res && res.error) || 'Something went wrong.');
+        }
+      })
+      .catch(function (err) {
+        btn.disabled = false;
+        btn.textContent = 'Put Me on the Naughty List';
+        if (window.turnstile) { try { window.turnstile.reset(); } catch (x) {} }
+        showError((err && err.message && err.message !== 'Failed to fetch')
+          ? err.message
+          : 'The Elves dropped your form. Check your connection and try again.');
+      });
+  });
+})();
+</script>
+<!-- Default Statcounter code for Bad Santa https://badsantaandtheangryelves.com -->
+<script type="text/javascript">
+var sc_project=13286974; var sc_invisible=1; var sc_security="006598c2";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13286974/0/006598c2/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>

@@ -12,8 +12,9 @@
     return target;
   }
 
+  function norm(p) { return p.replace(/^\//, '').replace(/\.html$/, ''); }
   function active(page) {
-    return path === page ? ' class="active"' : '';
+    return norm(path) === norm(page) ? ' class="active"' : '';
   }
 
   var ticketUrl = href('#tour');
@@ -22,6 +23,7 @@
   var navItems = [
     { label: 'Lore', url: '#lore', anchor: true },
     { label: 'The Elves', url: '#elves', anchor: true },
+    { label: 'The Naughty List', url: '/thenaughtylist' },
     { label: 'BSAE Merch', url: 'https://diggzstore.com/collections/bad-santa', external: true }
   ];
 
@@ -79,6 +81,7 @@
     + '<a href="https://x.com/BSantaAElves" target="_blank">Twitter</a>'
     + '<a href="epk.html">Listen</a>'
     + '<a href="buzz.html">Buzz</a>'
+    + '<a href="/thenaughtylist">The Naughty List</a>'
     + '</div>'
     + '<div class="copyright">Bad Santa and the Angry Elves &middot; Orlando, FL &middot; est. 2016 &middot; Smells Like Christmas Spirit 2026</div>'
     + '</footer>';
