@@ -148,6 +148,30 @@
     padding: 13px 14px;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
+  textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    color: var(--bone);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.45;
+    padding: 12px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 168, 74, 0.18); }
+  textarea::placeholder { color: rgba(236, 228, 214, 0.35); font-style: italic; }
+  .count {
+    margin-top: 6px;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--bone-dim);
+  }
   input::placeholder { color: rgba(236, 228, 214, 0.35); }
   input:focus {
     outline: none;
@@ -498,6 +522,18 @@
         <div class="err">Pick one so the Elves know how naughty to be.</div>
       </fieldset>
 
+      <!-- DEAR SANTA (optional) -->
+      <div class="field" data-field="wish">
+        <label class="lbl" for="wish">What do you want for Christmas? <span class="opt">(optional)</span></label>
+        <input type="text" id="wish" name="wish" maxlength="200" autocomplete="off" placeholder="Be honest. Santa already knows.">
+      </div>
+
+      <div class="field" data-field="note">
+        <label class="lbl" for="note">Drop a note to Bad Santa <span class="opt">(optional)</span></label>
+        <textarea id="note" name="note" maxlength="1000" placeholder="Confessions, requests, song dedications…"></textarea>
+        <div class="count"><span id="note-count">0</span> / 1000</div>
+      </div>
+
       <!-- Bot trap: humans never see this field -->
       <div class="hp" aria-hidden="true">
         <label for="website">Leave this field empty</label>
@@ -618,6 +654,12 @@
   tick();
   if (Date.now() < RSVP_DEADLINE) cdTimer = setInterval(tick, 1000);
 
+  /* Character counter for the note */
+  var noteBox = document.getElementById('note');
+  noteBox.addEventListener('input', function () {
+    document.getElementById('note-count').textContent = noteBox.value.length;
+  });
+
   /* Clear errors as people fix them */
   form.addEventListener('input', function (e) {
     var f = e.target.closest('[data-field]');
@@ -693,6 +735,8 @@
     data.append('marketing', form.querySelector('input[name="marketing"]:checked').value);
     data.append('rsvp', rsvpBox.checked ? 'yes' : 'no');
     data.append('guests', rsvpBox.checked ? guestsSel.value : '');
+    data.append('wish', val('wish'));
+    data.append('note', noteBox.value.trim());
     data.append('website', document.getElementById('website').value); /* honeypot */
     data.append('elapsed', String(elapsed));
     data.append('human', interacted ? '1' : '0');

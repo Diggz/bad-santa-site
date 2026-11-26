@@ -36,7 +36,8 @@ var SMS_CONSENT_TEXT =
 // Column order must match row 1 of the sheet.
 // Timestamp | First Name | Last Name | Email | Phone | SMS Opt-In | Marketing Opt-In |
 // SMS Consent Language Shown | Source Page | Referrer | User Agent |
-// RSVP: BSide @ Ten10 Brewing 11/27/2026 | Guests (incl. self)
+// RSVP: BSide @ Ten10 Brewing 11/27/2026 | Guests (incl. self) |
+// Christmas Wish | Note to Bad Santa
 
 function doPost(e) {
   try {
@@ -106,7 +107,9 @@ function doPost(e) {
       clean_(p.referrer, 300),
       clean_(p.ua, 300),
       rsvp,
-      guests
+      guests,
+      clean_(p.wish, 200),
+      cleanNote_(p.note, 1000)
     ];
 
     var lock = LockService.getScriptLock();
@@ -168,6 +171,13 @@ function json_(obj) {
 // Trim, cap length, and stop spreadsheet formula injection (=, +, -, @).
 function clean_(v, max) {
   var s = String(v || '').replace(/[\r\n\t]+/g, ' ').trim().slice(0, max || 100);
+  if (/^[=+\-@]/.test(s)) s = "'" + s;
+  return s;
+}
+
+// Like clean_ but keeps line breaks, so longer notes stay readable in the sheet.
+function cleanNote_(v, max) {
+  var s = String(v || '').replace(/\r\n?/g, '\n').replace(/\t/g, ' ').trim().slice(0, max || 1000);
   if (/^[=+\-@]/.test(s)) s = "'" + s;
   return s;
 }
