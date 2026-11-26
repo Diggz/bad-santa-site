@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Naughty List Roster — Bad Santa and the Angry Elves</title>
+<link rel="icon" type="image/jpeg" href="media/bs-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --panel: #141414;
+    --bone: #ece4d6;
+    --bone-dim: #a9a296;
+    --blood: #c8242c;
+    --gold: #d4a84a;
+    --line: rgba(236, 228, 214, 0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black);
+    color: var(--bone);
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 36px 20px 60px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 28px; }
+  .eyebrow {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blood);
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Bungee Inline', 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: clamp(30px, 6vw, 46px);
+    line-height: 1.1;
+  }
+
+  /* Summary tiles */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blood);
+    border-radius: 6px;
+    padding: 16px 10px 14px;
+    text-align: center;
+  }
+  .stat.gold { border-top-color: var(--gold); }
+  .stat b {
+    display: block;
+    font-size: clamp(34px, 7vw, 48px);
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat span {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+  }
+
+  /* Toolbar */
+  .toolbar { display: flex; gap: 10px; margin-bottom: 10px; }
+  .search {
+    flex: 1;
+    min-width: 0;
+    background: var(--panel);
+    border: 1px solid rgba(236, 228, 214, 0.25);
+    border-radius: 6px;
+    color: var(--bone);
+    font-family: inherit;
+    font-size: 18px;
+    padding: 12px 14px;
+  }
+  .search:focus { outline: none; border-color: var(--gold); }
+  .search::placeholder { color: rgba(236, 228, 214, 0.35); }
+  .btn {
+    background: transparent;
+    border: 1px solid rgba(236, 228, 214, 0.3);
+    border-radius: 6px;
+    color: var(--bone);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+  .btn:hover { border-color: var(--gold); color: var(--gold); }
+  .meta {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--bone-dim);
+    margin-bottom: 22px;
+  }
+
+  /* Lists */
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    margin: 26px 0 0;
+  }
+  h2 small { font-size: 13px; color: var(--bone-dim); letter-spacing: 0.1em; }
+  ol { list-style: none; }
+  li {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  li:nth-child(even) { background: rgba(236, 228, 214, 0.03); }
+  .num { font-size: 14px; color: var(--bone-dim); text-align: right; font-variant-numeric: tabular-nums; }
+  .name { font-size: 21px; font-weight: 500; letter-spacing: 0.02em; }
+  .name .last { font-weight: 700; }
+  .party {
+    min-width: 92px;
+    text-align: center;
+    background: var(--blood);
+    color: var(--bone);
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .party.none { background: transparent; border: 1px solid var(--line); color: var(--bone-dim); }
+  .empty { padding: 18px 4px; color: var(--bone-dim); font-size: 16px; }
+  .status { text-align: center; padding: 40px 0; color: var(--bone-dim); font-size: 18px; }
+  .status.err { color: #ff6b70; }
+
+  @media (max-width: 520px) {
+    body { padding: 26px 14px 50px; }
+    .stats { gap: 8px; }
+    .stat span { font-size: 10px; letter-spacing: 0.1em; }
+    li { grid-template-columns: 28px 1fr auto; padding: 12px 2px; }
+    .name { font-size: 18px; }
+    .party { min-width: 0; font-size: 14px; padding: 4px 10px; }
+    .toolbar { flex-wrap: wrap; }
+    .search { flex-basis: 100%; }
+    .btn { flex: 1; padding: 11px 12px; }
+    h2 { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+
+  /* Printable door list */
+  @media print {
+    body { background: #fff; color: #000; padding: 0; }
+    .toolbar, .meta .live { display: none; }
+    .stat { background: #fff; border: 1px solid #999; }
+    .stat span, .num, .meta, h2 small { color: #444; }
+    h2 { color: #000; border-bottom-color: #000; }
+    li { border-bottom-color: #ccc; break-inside: avoid; }
+    li:nth-child(even) { background: #f4f4f4; }
+    .party { background: #fff; color: #000; border: 1px solid #000; }
+    .eyebrow { color: #000; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Bad Santa and the Angry Elves</div>
+    <h1>The Naughty List</h1>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b id="s-signups">–</b><span>Signups</span></div>
+    <div class="stat"><b id="s-parties">–</b><span>BSide RSVPs</span></div>
+    <div class="stat gold"><b id="s-guests">–</b><span>Total Guests</span></div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="search" type="search" placeholder="Search names…" autocomplete="off">
+    <button class="btn" id="refresh" type="button">Refresh</button>
+    <button class="btn" id="print" type="button">Print</button>
+  </div>
+  <div class="meta" id="meta">Loading…</div>
+
+  <div id="lists">
+    <div class="status" id="status">Checking the list twice…</div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyGKtzYbz_8sSbxTsoNddHdBARxmZ8C-oSIHX1LD_QFa27z4ljGOjBQbMZg8wCJR56cBg/exec';
+  var KEY = 'Oh6aXB9IoYaxHqTz3tO8WrlbdkSp';
+  var AUTO_REFRESH_MS = 60000;
+
+  var people = [];
+  var search = document.getElementById('search');
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  /* Tidy all-lowercase or ALL-CAPS names for reading; leave mixed case alone (McDonald, DeLuca). */
+  function nice(s) {
+    s = String(s || '').trim();
+    if (s && (s === s.toLowerCase() || s === s.toUpperCase())) {
+      s = s.toLowerCase().replace(/(^|[\s\-'])([a-z])/g, function (m, a, b) { return a + b.toUpperCase(); });
+    }
+    return s;
+  }
+  function byLast(a, b) {
+    return (a.last + ' ' + a.first).toLowerCase().localeCompare((b.last + ' ' + b.first).toLowerCase());
+  }
+
+  function row(p, i, showParty) {
+    var party = showParty
+      ? '<span class="party">' + p.guests + (p.guests === 1 ? ' guest' : ' guests') + '</span>'
+      : '<span class="party none">No RSVP</span>';
+    return '<li><span class="num">' + (i + 1) + '</span>' +
+      '<span class="name">' + esc(p.first) + ' <span class="last">' + esc(p.last) + '</span></span>' +
+      party + '</li>';
+  }
+
+  function render() {
+    var q = search.value.trim().toLowerCase();
+    var match = people.filter(function (p) {
+      return !q || (p.first + ' ' + p.last).toLowerCase().indexOf(q) !== -1;
+    });
+    var going = match.filter(function (p) { return p.rsvp === 'Yes'; });
+    var others = match.filter(function (p) { return p.rsvp !== 'Yes'; });
+    var goingGuests = going.reduce(function (n, p) { return n + p.guests; }, 0);
+
+    var html = '<h2>BSide at Ten10 Brewing &middot; 11/27 <small>' + going.length + (going.length === 1 ? ' RSVP' : ' RSVPs') + ' &middot; ' + goingGuests + (goingGuests === 1 ? ' guest' : ' guests') + '</small></h2>';
+    html += going.length
+      ? '<ol>' + going.map(function (p, i) { return row(p, i, true); }).join('') + '</ol>'
+      : '<div class="empty">' + (q ? 'No RSVPs match that name.' : 'No RSVPs yet.') + '</div>';
+
+    if (others.length) {
+      html += '<h2>Also on the Naughty List <small>' + others.length + '</small></h2>';
+      html += '<ol>' + others.map(function (p, i) { return row(p, i, false); }).join('') + '</ol>';
+    }
+    document.getElementById('lists').innerHTML = html;
+  }
+
+  function load() {
+    var btn = document.getElementById('refresh');
+    btn.disabled = true;
+    btn.textContent = '…';
+    fetch(ENDPOINT + '?list=1&key=' + encodeURIComponent(KEY), { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res || !res.ok) throw new Error((res && res.error) || 'Could not load the list.');
+        people = (res.people || []).map(function (p) {
+          return { first: nice(p.first), last: nice(p.last), rsvp: p.rsvp, guests: Number(p.guests) || 0 };
+        }).sort(byLast);
+
+        var rsvps = people.filter(function (p) { return p.rsvp === 'Yes'; });
+        document.getElementById('s-signups').textContent = people.length;
+        document.getElementById('s-parties').textContent = rsvps.length;
+        document.getElementById('s-guests').textContent = rsvps.reduce(function (n, p) { return n + p.guests; }, 0);
+
+        var t = new Date(res.updated || Date.now());
+        document.getElementById('meta').innerHTML = 'Updated ' +
+          t.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) +
+          ' <span class="live">&middot; refreshes every minute &middot; sorted by last name</span>';
+        render();
+      })
+      .catch(function (err) {
+        document.getElementById('meta').textContent = '';
+        if (!people.length) {
+          document.getElementById('lists').innerHTML = '<div class="status err">' + esc(err.message || 'Could not load the list.') + ' Try Refresh.</div>';
+        }
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.textContent = 'Refresh';
+      });
+  }
+
+  search.addEventListener('input', render);
+  document.getElementById('refresh').addEventListener('click', load);
+  document.getElementById('print').addEventListener('click', function () { window.print(); });
+  load();
+  setInterval(function () { if (!document.hidden) load(); }, AUTO_REFRESH_MS);
+})();
+</script>
+</body>
+</html>

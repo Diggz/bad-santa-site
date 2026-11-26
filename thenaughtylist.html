@@ -223,6 +223,68 @@
     transition: opacity 0.2s;
   }
   .guests.disabled { opacity: 0.35; }
+  /* RSVP countdown */
+  .rsvp-countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(212, 168, 74, 0.35);
+  }
+  .cd-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .cd-clock { display: flex; justify-content: center; gap: 8px; }
+  .cd-unit {
+    min-width: 58px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    padding: 6px 6px 5px;
+  }
+  .cd-unit b {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+    color: var(--bone);
+    font-variant-numeric: tabular-nums;
+  }
+  .cd-unit span {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+  }
+  .rsvp-countdown.urgent .cd-unit b { color: var(--blood); }
+  .rsvp-countdown[hidden] { display: none; }
+  .rsvp-closed {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .show-rsvp.closed .choice,
+  .show-rsvp.closed .guests { opacity: 0.35; pointer-events: none; }
+  @media (max-width: 640px) {
+    .cd-clock { width: 100%; }
+    .cd-unit { flex: 1; min-width: 0; }
+  }
+
   .guests-note {
     margin-top: 10px;
     font-size: 15px;
@@ -351,6 +413,16 @@
 
       <!-- SHOW RSVP -->
       <fieldset class="show-rsvp" id="rsvp-set">
+        <div class="rsvp-countdown" id="rsvp-countdown" aria-live="off">
+          <span class="cd-label">RSVPs close Thu 11/26 at midnight</span>
+          <div class="cd-clock" role="timer" aria-label="Time left to RSVP">
+            <div class="cd-unit"><b id="cd-d">0</b><span>Days</span></div>
+            <div class="cd-unit"><b id="cd-h">00</b><span>Hrs</span></div>
+            <div class="cd-unit"><b id="cd-m">00</b><span>Min</span></div>
+            <div class="cd-unit"><b id="cd-s">00</b><span>Sec</span></div>
+          </div>
+        </div>
+        <p class="rsvp-closed" id="rsvp-closed" hidden>RSVPs for BSide at Ten10 Brewing are closed. You can still join the Naughty List for future shows!</p>
         <label class="choice" for="rsvp">
           <input type="checkbox" id="rsvp" name="rsvp" value="yes" checked>
           <span>
@@ -518,6 +590,33 @@
   }
   rsvpBox.addEventListener('change', syncGuests);
   syncGuests();
+
+  /* RSVP deadline: end of Thursday 11/26/2026, midnight Eastern (Fri 11/27 05:00 UTC) */
+  var RSVP_DEADLINE = Date.UTC(2026, 10, 27, 5, 0, 0);
+  var cdBox = document.getElementById('rsvp-countdown');
+  var cdTimer = null;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function closeRsvp() {
+    if (cdTimer) clearInterval(cdTimer);
+    cdBox.hidden = true;
+    document.getElementById('rsvp-closed').hidden = false;
+    document.getElementById('rsvp-set').classList.add('closed');
+    rsvpBox.checked = false;
+    rsvpBox.disabled = true;
+    syncGuests();
+  }
+  function tick() {
+    var left = RSVP_DEADLINE - Date.now();
+    if (left <= 0) { closeRsvp(); return; }
+    var sec = Math.floor(left / 1000);
+    document.getElementById('cd-d').textContent = Math.floor(sec / 86400);
+    document.getElementById('cd-h').textContent = pad(Math.floor(sec % 86400 / 3600));
+    document.getElementById('cd-m').textContent = pad(Math.floor(sec % 3600 / 60));
+    document.getElementById('cd-s').textContent = pad(sec % 60);
+    cdBox.classList.toggle('urgent', left < 3 * 3600 * 1000);
+  }
+  tick();
+  if (Date.now() < RSVP_DEADLINE) cdTimer = setInterval(tick, 1000);
 
   /* Clear errors as people fix them */
   form.addEventListener('input', function (e) {

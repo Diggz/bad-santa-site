@@ -21,6 +21,8 @@
 var SPREADSHEET_ID = '196qv6zPh3_lbZ1LE4sS_yTdVLPeOM8G5NNAgTcJUAt0';
 var SHEET_NAME = 'Naughty List';
 var MIN_FILL_MS = 2500;
+// BSide at Ten10 Brewing RSVPs close at midnight at the end of Thursday 11/26/2026, Eastern (Fri 11/27 05:00 UTC).
+var RSVP_DEADLINE = Date.UTC(2026, 10, 27, 5, 0, 0);
 
 // Keep this in sync with the SMS checkbox text on naughty-list.html.
 // It's saved with every SMS opt-in as a record of what the person agreed to.
@@ -71,6 +73,9 @@ function doPost(e) {
     // Show RSVP. Blank if the page didn't send it (older cached page).
     var rsvp = p.rsvp === 'yes' ? 'Yes' : (p.rsvp === 'no' ? 'No' : '');
     var guests = '';
+    if (rsvp === 'Yes' && Date.now() >= RSVP_DEADLINE) {
+      return json_({ ok: false, error: 'RSVPs for BSide at Ten10 Brewing closed at midnight on 11/26. Uncheck the RSVP box to still join the Naughty List.' });
+    }
     if (rsvp === 'Yes') {
       guests = Math.floor(Number(p.guests));
       if (!(guests >= 1 && guests <= 4)) return json_({ ok: false, error: 'Please pick 1 to 4 guests, including yourself.' });
@@ -126,7 +131,30 @@ function doPost(e) {
   }
 }
 
-function doGet() {
+// Read-only guest list for the unlinked roster page (names + RSVP only, nothing else).
+// Requests must include ?list=1&key=LIST_KEY. Change the key here and in
+// naughtylist-roster.html to cut off old copies of that page.
+var LIST_KEY = 'Oh6aXB9IoYaxHqTz3tO8WrlbdkSp';
+
+function doGet(e) {
+  var p = (e && e.parameter) || {};
+  if (p.list === '1') {
+    if (p.key !== LIST_KEY) return json_({ ok: false, error: 'Not allowed.' });
+    var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
+    var values = sheet.getDataRange().getValues();
+    var people = [];
+    for (var i = 1; i < values.length; i++) {
+      var r = values[i];
+      if (!r[1] && !r[2]) continue;
+      people.push({
+        first: String(r[1] || ''),
+        last: String(r[2] || ''),
+        rsvp: String(r[11] || ''),
+        guests: Number(r[12]) || 0
+      });
+    }
+    return json_({ ok: true, updated: new Date().toISOString(), people: people });
+  }
   return json_({ ok: true, service: 'Bad Santa Naughty List' });
 }
 

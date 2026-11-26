@@ -313,6 +313,54 @@
     text-transform: uppercase;
     margin: 0;
   }
+  /* BSide RSVP countdown in the red bar */
+  .home-cd {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 26px;
+    color: var(--bone);
+    text-decoration: none;
+  }
+  .home-cd[hidden] { display: none; }
+  .home-cd:hover { color: var(--bone); }
+  .home-cd-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .home-cd-clock { display: flex; justify-content: center; gap: 10px; }
+  .home-cd-unit {
+    min-width: 66px;
+    background: rgba(10, 10, 10, 0.35);
+    border: 1px solid rgba(236, 228, 214, 0.35);
+    border-radius: 4px;
+    padding: 8px 6px 6px;
+  }
+  .home-cd-unit b {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+  }
+  .home-cd-unit span {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  @media (max-width: 640px) {
+    .home-cd-label { font-size: 12px; }
+    .home-cd-unit { min-width: 0; flex: 1; }
+    .home-cd-unit b { font-size: 24px; }
+    .home-cd-clock { gap: 6px; }
+  }
   .manifesto-link { color: var(--bone); text-decoration: none; border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s; }
   .manifesto-link:hover { color: var(--black); border-bottom-color: var(--black); }
   .manifesto p + p { margin-top: 8px; font-size: clamp(18px, 2.5vw, 28px); letter-spacing: 0.12em; }
@@ -523,6 +571,15 @@
 
 <!-- MANIFESTO STRIP -->
 <div class="manifesto">
+  <a href="/thenaughtylist" class="home-cd" id="home-cd" aria-label="RSVP to BSide at Ten10 Brewing before midnight Thursday 11/26">
+    <div class="home-cd-label">RSVP for BSide at Ten10 Brewing closes in</div>
+    <div class="home-cd-clock" role="timer">
+      <div class="home-cd-unit"><b id="hcd-d">0</b><span>Days</span></div>
+      <div class="home-cd-unit"><b id="hcd-h">00</b><span>Hrs</span></div>
+      <div class="home-cd-unit"><b id="hcd-m">00</b><span>Min</span></div>
+      <div class="home-cd-unit"><b id="hcd-s">00</b><span>Sec</span></div>
+    </div>
+  </a>
   <p><a href="/thenaughtylist" class="manifesto-link">Get on the Naughty List</a></p>
   <!-- <p>Kindness &middot; Joy &middot; Gratitude</p> -->
 </div>
@@ -789,6 +846,27 @@
   });
   box.addEventListener('click', close);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+<script>
+/* BSide RSVP countdown: end of Thursday 11/26/2026, midnight Eastern (Fri 11/27 05:00 UTC). Hides itself after. */
+(function () {
+  var DEADLINE = Date.UTC(2026, 10, 27, 5, 0, 0);
+  var box = document.getElementById('home-cd');
+  if (!box) return;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  var t = null;
+  function tick() {
+    var left = DEADLINE - Date.now();
+    if (left <= 0) { box.hidden = true; if (t) clearInterval(t); return; }
+    var sec = Math.floor(left / 1000);
+    document.getElementById('hcd-d').textContent = Math.floor(sec / 86400);
+    document.getElementById('hcd-h').textContent = pad(Math.floor(sec % 86400 / 3600));
+    document.getElementById('hcd-m').textContent = pad(Math.floor(sec % 3600 / 60));
+    document.getElementById('hcd-s').textContent = pad(sec % 60);
+  }
+  tick();
+  if (Date.now() < DEADLINE) t = setInterval(tick, 1000);
 })();
 </script>
 <script src="includes.js"></script>
